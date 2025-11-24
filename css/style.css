@@ -1,7 +1,14 @@
 /********** Template CSS **********/
+*{
+    margin: 0;
+    padding: 0;
+}
+
 :root {
+
     --primary: #768862;
     --secondary: #FFD33C;
+    --title: #563333;
     --light: #F3F3F3;
     --dark: #212121;
 }
@@ -14,9 +21,54 @@
     margin-left: 0;
 }
 
-.btn {
-    font-family: 'Roboto', sans-serif;
+
+/*top bar css*/
+.top-bar {
+    font-family: 'Alata', sans-serif;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
     font-weight: 500;
+
+}
+.top-bar-left {
+    display: flex;
+    padding-left: 60px;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 50px;
+}
+.social-item {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.social-item:hover {
+    background-color: #FFFFFF;
+    color: var(--primary);
+    border-color: white; 
+}
+
+.btn {
+    font-family: 'Alata', sans-serif;
+    font-weight: 600;
     transition: .5s;
 }
 
@@ -47,6 +99,8 @@
     text-align: center;
 }
 
+
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -56,21 +110,29 @@
     z-index: 99;
 }
 
+/*logo*/
+nav img {
+    position: relative;
+    width: 250px;
+    max-height: 60px;
+    padding-left: 50px;
+    object-fit: cover;
+}
+
+/* Menu */
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Alata', sans-serif;
     position: relative;
     margin-left: 30px;
-    padding: 25px 0;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--dark);
+    padding: 20px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--title);
     outline: none;
     transition: .5s;
 }
-.navbar-brand img {
-      height: 80px;
-      max-width: 250px;
-      object-fit: contain; /* Giữ tỷ lệ logo */
+.navbar-nav {
+    padding-right: 90px;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -375,7 +437,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(122, 183, 48, .8);
+    background:  #768862  ;
     transition: .5s;
     opacity: 0;
 }
@@ -458,4 +520,22 @@
 
 .blog-item a:hover i::after {
     width: 50px;
+}
+
+/********** Giỏ hàng CSS **********/
+ @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+top: 13px;
 }
