@@ -32,8 +32,6 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    font-weight: 500;
-
 }
 .top-bar-left {
     display: flex;
@@ -71,7 +69,7 @@
 /* Button CSS */
 .btn {
     font-family: 'Alata', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     transition: .5s;
 }
 
@@ -115,7 +113,7 @@
 /*logo*/
 .navbar-brand img {
     position: relative;
-    width: 250px;
+    width: 300px;
     max-height: 60px;
     padding-left: 100px;
     object-fit: cover;
@@ -126,9 +124,8 @@
     font-family: 'Alata', sans-serif;
     position: relative;
     margin: 0 10px;
-    padding: 20px 0;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--title) !important;
     outline: none;
     transition: .5s;
@@ -177,7 +174,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .nav-link  {
         margin-left: 0;
         padding: 10px 0;
     }
@@ -220,6 +217,7 @@
     font-weight: bold;
     justify-content: center;
 }
+
 .hero-header {
     background: url(../img/hero.jpg) top right no-repeat;
     background-size: cover;
@@ -565,20 +563,81 @@
     width: 50px;
 }
 
-/********** Giỏ hàng CSS **********/
- @media (min-width: 1025px) {
-.h-custom {
-height: 100vh !important;
-}
-}
-
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-font-size: 1rem;
-line-height: 2.15;
-padding-left: .75em;
-padding-right: .75em;
+/*Giỏ hàng*/
+/* Màu chữ nâu thương hiệu */
+.text-brown {
+    color: var(--title) !important;
+    font-weight: 600;
 }
 
-.card-registration .select-arrow {
-top: 13px;
+/* Ẩn số hiển thị trong input number cho gọn */
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+/* Style cho bảng giỏ hàng */
+.table th {
+    border-top: none;
+    color: #666;
+    font-weight: 600;
+}
+/* --- 1. BO VIỀN CHO KHUNG (BOX & CARD) --- */
+.cart-box, .card {
+    border-radius: 20px !important; /* Bo cong 20px (khá mềm mại) */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important; /* Đổ bóng nhẹ cho nổi */
+    border: none !important; /* Bỏ đường viền xám mặc định của Bootstrap */
+    overflow: hidden; /* Giúp các góc không bị nội dung bên trong che mất */
+}
+
+/* --- 2. BO VIỀN CHO NÚT (BUTTON) --- */
+.btn {
+    border-radius: 50px !important; /* Bo tròn kiểu viên thuốc (Pill shape) */
+    padding-left: 25px !important; /* Tăng độ rộng nút cho đẹp */
+    padding-right: 25px !important;
+}
+
+/* --- 3. BO VIỀN CHO Ô NHẬP LIỆU (INPUT) --- */
+.form-control {
+    border-radius: 50px !important;
+    padding-left: 20px;
+}
+
+/* --- 4. XỬ LÝ CHỖ NHẬP COUPON (Input dính liền Nút) --- */
+/* Vì input và nút dính nhau nên phải chỉnh riêng góc nối */
+.input-group .form-control {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    padding-left: 20px !important; /* Chỉnh lại padding cho cân */
+}
+/* GHI ĐÈ class của Bootstrap */
+.btn-outline {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Quan trọng: Phải chỉnh cả hiệu ứng khi di chuột (Hover) */
+.btn-outline:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important; /* Chữ chuyển thành trắng */
+}
+/* Áp dụng cho tiêu đề lớn, bảng sản phẩm và khung tổng tiền */
+.container h2,         /* Tiêu đề "Giỏ hàng của bạn" */
+.cart-box,              /* Bảng sản phẩm bên trái */
+.card,                  /* Khung tính tiền bên phải */
+.btn {                  /* Các nút bấm */
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* Chỉnh thêm độ đậm cho các tiêu đề nhìn cho rõ */
+h2, h5, h6, .fw-bold {
+    font-weight: 600 !important; /* Đậm hơn */
+}
+h5, h6, .h5, .h6 {
+    font-family: 'Alata', sans-serif !important;
 }
