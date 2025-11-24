@@ -2,12 +2,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
 :root {
 
     --primary: #768862;
-    --secondary: #FFD33C;
+    --secondary:  #FFF8CC;
     --title: #563333;
     --light: #F3F3F3;
     --dark: #212121;
@@ -66,6 +66,9 @@
     border-color: white; 
 }
 
+/*end top bar css*/
+
+/* Button CSS */
 .btn {
     font-family: 'Alata', sans-serif;
     font-weight: 600;
@@ -99,8 +102,6 @@
     text-align: center;
 }
 
-
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -110,42 +111,47 @@
     z-index: 99;
 }
 
+/*navigation bar*/ 
 /*logo*/
-nav img {
+.navbar-brand img {
     position: relative;
     width: 250px;
     max-height: 60px;
-    padding-left: 50px;
+    padding-left: 100px;
     object-fit: cover;
 }
 
-/* Menu */
-.navbar-light .navbar-nav .nav-link {
+/*menu*/
+.nav-link {
     font-family: 'Alata', sans-serif;
     position: relative;
-    margin-left: 30px;
+    margin: 0 10px;
     padding: 20px 0;
     font-size: 17px;
     font-weight: 600;
-    color: var(--title);
+    color: var(--title) !important;
     outline: none;
     transition: .5s;
 }
+
 .navbar-nav {
     padding-right: 90px;
 }
 
-.sticky-top.navbar-light .navbar-nav .nav-link {
+.sticky-top.nav-link {
     padding: 18px 0;
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
+.nav-link:hover
+{
+    color: var(--primary) !important;
+}
+.nav-link.active {
     color: var(--primary);
 }
 
 @media (min-width: 992px) {
-    .navbar-light .navbar-nav .nav-link::before {
+    .nav-link::before {
         position: absolute;
         content: "";
         width: 0;
@@ -156,13 +162,13 @@ nav img {
         transition: .5s;
     }
 
-    .navbar-light .navbar-nav .nav-link:hover::before,
-    .navbar-light .navbar-nav .nav-link.active::before {
+    .nav-link:hover::before,
+    .nav-link.active:before {
         width: 100%;
         left: 0;
     }
 
-    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+    .nav-link.nav-contact::before {
         width: 100%;
         height: 1px;
         top: -1px;
@@ -177,6 +183,43 @@ nav img {
     }
 }
 
+/* 3. CHỈNH ICON BÊN PHẢI */
+.navbar-icons {
+    display: flex;
+    gap: 25px; /* Khoảng cách giữa các icon */
+    align-items: center;
+    padding-right:100px;
+}
+
+.icon-link {
+    color: var(--title); /* Màu nâu giống chữ menu */
+    font-size: 20px; /* Kích thước icon */
+    transition: transform 0.2s, color 0.2s;
+    display: flex;
+    position: relative;
+}
+
+/* Hiệu ứng hover icon */
+.icon-link:hover {
+    color: var(--primary); /* Đổi màu xanh */
+    transform: translateY(-2px); /* Nhảy nhẹ lên trên cho đẹp */
+}
+
+.badge-cart {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--secondary); 
+    color: var(--dark); /* Màu chữ bên trong badge */
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center; 
+    font-weight: bold;
+    justify-content: center;
+}
 .hero-header {
     background: url(../img/hero.jpg) top right no-repeat;
     background-size: cover;
