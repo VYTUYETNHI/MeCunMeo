@@ -139,3 +139,85 @@ h5, h6, .h5, .h6 {
     color: #dc3545; /* Icon đỏ đậm */
     transform: scale(1.1); /* Phóng to nhẹ */
 }
+/* --- PRODUCT CARD STYLE --- */
+
+/* 1. Khung sản phẩm */
+.product-card {
+    border-radius: 15px !important; /* Bo góc mềm mại */
+    transition: all 0.3s ease;
+    overflow: hidden; /* Để ảnh không bị lòi ra ngoài góc bo */
+}
+
+/* Hiệu ứng khi di chuột vào khung: Nổi lên + Bóng đổ */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* 2. Ảnh sản phẩm */
+.product-card img {
+    width: 100%;
+    aspect-ratio: 1/1; /* Ép ảnh luôn hình vuông (cho đều) */
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+/* Zoom nhẹ ảnh khi hover */
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* 3. Tên sản phẩm */
+.product-card .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
+    /* Cắt chữ nếu quá dài (tối đa 2 dòng) */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 40px; /* Chiều cao cố định để các card bằng nhau */
+}
+
+.product-card .card-title a:hover {
+    color: #768862 !important; /* Đổi màu xanh khi hover tên */
+}
+
+/* 4. Nút hành động (Cart/View) - Ban đầu ẩn đi */
+.product-action {
+    position: absolute;
+    bottom: -50px; /* Giấu ở dưới đáy ảnh */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+/* Khi hover vào card thì nút trồi lên */
+.product-card:hover .product-action {
+    bottom: 20px;
+}
+
+/* Style cho từng nút tròn */
+.btn-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    color: #563333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    background: #768862; /* Màu xanh thương hiệu */
+    color: white;
+}
