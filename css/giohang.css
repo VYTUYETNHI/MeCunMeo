@@ -85,3 +85,57 @@ h2, h5, h6, .fw-bold {
 h5, h6, .h5, .h6 {
     font-family: 'Alata', sans-serif !important;
 }
+/* Checkbox to hơn một chút */
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #ccc; /* Viền xám khi chưa tích */
+}
+
+/* Khi tích vào thì đổi màu nền và viền thành màu Nâu */
+.custom-checkbox:checked {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* Hiệu ứng khi focus */
+.custom-checkbox:focus {
+    box-shadow: 0 0 0 0.25rem rgba(86, 51, 51, 0.25);
+}
+/* --- 2. CỐ ĐỊNH CỘT & XUỐNG DÒNG --- */
+.cart-table {
+    table-layout: fixed; /* Bắt buộc bảng tuân theo kích thước % */
+    width: 100%;
+}
+
+/* Xử lý tên sản phẩm */
+.product-name-text h6 {
+    white-space: normal; /* Cho phép xuống dòng */
+    overflow-wrap: break-word; /* Cắt từ xuống dòng nếu quá dài */
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+/* 2. CĂN CHỈNH ICON THÙNG RÁC */
+.cart-table td:last-child {
+    text-align: center; /* Căn giữa theo chiều ngang */
+    vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.cart-table .fa-trash {
+    display: inline-flex; /* Giúp icon căn chỉnh chuẩn hơn */
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Tạo vùng bấm hình tròn */
+    transition: all 0.2s;
+}
+
+/* Hiệu ứng khi rê chuột vào thùng rác (Tạo cảm giác xịn) */
+.cart-table .fa-trash:hover {
+    background-color: #f8d7da; /* Nền đỏ nhạt */
+    color: #dc3545; /* Icon đỏ đậm */
+    transform: scale(1.1); /* Phóng to nhẹ */
+}

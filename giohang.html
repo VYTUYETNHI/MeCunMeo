@@ -81,7 +81,7 @@
     </nav>
     <!-- Navbar End -->
 
-    <!-- Giỏ hàng -->
+<!-- Giỏ hàng -->
  <div class="container py-5">
     <h2 class="mb-4" style="color: #563333; font-weight: 700;">Giỏ hàng của bạn</h2>
 
@@ -90,61 +90,73 @@
         <!-- CỘT TRÁI: DANH SÁCH SẢN PHẨM -->
          <div class="cart-box bg-white p-4 mb-3">
             <div class="table-responsive">
-                <table class="table align-middle">
+                <table class="table align-middle cart-table">
                     <thead style="background-color: white;">
                         <tr>
-                            <th>Sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tạm tính</th>
-                            <th>Xóa</th>
+                            <!-- 1. THÊM Ô CHECKBOX "CHỌN TẤT CẢ" Ở ĐÂY -->
+                        <th style="width: 5%; text-align: center;"> 
+                            <input type="checkbox" id="selectAll" class="form-check-input custom-checkbox" checked>
+                             <th style="width: 50%;">Sản phẩm</th>
+                            
+                            <!-- 3. CÁC CỘT CÒN LẠI: Chia đều hoặc tùy chỉnh -->
+                            <th style="width: 12%;">Giá</th>
+                            <th style="width: 12%;">Số lượng</th>
+                            <th style="width: 12%;">Tạm tính</th>
+                            <th style="width: 10%; text-align: center;">Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Sản phẩm 1 -->
                         <tr class="cart-item">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="img/giohang-sp1.png" alt="Hạt cho mèo" class="rounded me-3">
-                                    <div>
-                                        <h6 class="mb-0 text-dark">Open Farm - Hạt cho mèo vị Cá ngừ</h6>
-                                        <small class="text-muted">Gói 300gr</small>
-                                    </div>
+                            <!-- THÊM Ô CHECKBOX CHO SẢN PHẨM Ở ĐÂY -->
+                        <td class="text-center">
+                            <input type="checkbox" class="form-check-input custom-checkbox item-checkbox" checked onchange="updateCart()">
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center product-name">
+                                <img src="img/giohang-sp1.png" alt="Hạt cho mèo" class="rounded me-3" style="width: 80px; height: 80px; object-fit: cover; flex-shrink: 0;">
+                                <div>
+                                    <h6 class="mb-0 text-dark">Open Farm - Hạt cho mèo vị Cá thu</h6>
+                                    <small class="text-muted">Gói 300gr</small>
                                 </div>
-                            </td>
-                            <td class="price">100.000</td> <!-- Giá gốc (ẩn đơn vị để dễ tính) -->
+                            </div>
+                        </td>
+                            <td class="price">100.000</td> 
                             <td>
                                 <input type="number" class="form-control quantity-input" value="1" min="1" style="width: 70px;">
                             </td>
                             <td class="subtotal">100.000đ</td>
-                            <td><i class="fa-solid fa-trash text-danger" style="cursor: pointer;"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-trash text-danger" style="cursor: pointer;"></i></td>
                         </tr>
 
                         <!-- Sản phẩm 2 -->
                         <tr class="cart-item">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="img/giohang-sp2.png" alt="Pate cho cún" class="rounded me-3">
-                                    <div>
-                                        <h6 class="mb-0 text-dark">Open Farm - Hạt cho mèo vị Cá thu</h6>
-                                        <small class="text-muted">Gói 300gr</small>
-                                    </div>
+                        <td class ="text-center">
+                            <input type="checkbox" class="form-check-input custom-checkbox item-checkbox" checked onchange="updateCart()">
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center product-name">
+                                <img src="img/giohang-sp2.png" alt="Hạt cho mèo" class="rounded me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                                <div>
+                                    <h6 class="mb-0 text-dark">Open Farm - Hạt cho mèo vị Cá ngừ</h6>
+                                    <small class="text-muted">Gói 300gr</small>
                                 </div>
-                            </td>
+                            </div>
+                        </td>
                             <td class="price">100.000</td>
                             <td>
                                 <input type="number" class="form-control quantity-input" value="2" min="1" style="width: 70px;">
                             </td>
                             <td class="subtotal">100.000đ</td>
-                            <td><i class="fa-solid fa-trash text-danger" style="cursor: pointer;"></i></td>
+                            <td class="text-center"><i class="fa-solid fa-trash text-danger" style="cursor: pointer;"></i></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
             
-            <!-- Nút -->
-            <a href="index.html" class="btn btn-outline mt-3"><i class="fa-solid fa-arrow-left"></i> Quay về cửa hàng</a>
+        <!-- Nút -->
+        <a href="index.html" class="btn btn-outline mt-3"><i class="fa-solid fa-arrow-left"></i> Quay về cửa hàng</a>
         </div>
        
         <!-- CỘT PHẢI: TỔNG TIỀN & MÃ GIẢM GIÁ -->
@@ -155,7 +167,7 @@
                     
                     <div class="d-flex justify-content-between mb-3">
                         <span>Tạm tính:</span>
-                        <span id="cart-subtotal" class="fw-bold">300.000đ</span>
+                        <span id="cart-subtotal" class="fw-bold">200.000đ</span>
                     </div>
 
                     <!-- PHẦN NHẬP COUPON -->
@@ -171,28 +183,33 @@
                     </div>
 
                     <hr>
+                    <!-- Thêm dòng Phí vận chuyển -->
+                    <div class="d-flex justify-content-between mb-3">
+                    <span>Phí vận chuyển:</span>
+                    <span>Tính khi thanh toán</span>
+                    </div>
 
                     <div class="d-flex justify-content-between mb-4">
                         <span class="h5 fw-bold">Tổng cộng:</span>
-                        <span id="cart-total" class="h5 fw-bold">300.000đ</span>
+                        <span id="cart-total" class="h5 fw-bold">200.000đ</span>
                     </div>
 
-                    <button class="btn btn-dark w-100 py-2" style="background-color: #563333;">Thanh toán</button>
+                    <a href="thanhtoan.html" class="btn btn-dark w-100 py-2" style="background-color: #563333;">Thanh toán</a>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
-    <!-- Giỏ hàng End -->
+<!-- Giỏ hàng End -->
 
-    <!-- Footer Start -->
+<!-- Footer Start -->
 <footer class="footer-section">
     <div class="container">
         <div class="row justify-content-between">
             <!-- CỘT 1: THÔNG TIN THƯƠNG HIỆU -->
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="footer-logo mb-3">
-                    <!-- Thay ảnh logo của bạn vào đây -->
                     <img src="img/logo-tron.png" alt="Mê Cún Mèo" style="background: white; border-radius: 50%; height: 100px; width: 100px; object-fit: contain;">
                 </div>
                 <h3 class="footer-heading">Từ yêu thương, tạo nên Mê Cún Mèo</h3>
@@ -200,7 +217,6 @@
                     Mê Cún Mèo là nơi bạn tìm thấy những lựa chọn organic thuần khiết dành cho thú cưng - an lành, đáng tin và chan chứa yêu thương.
                 </p>
             </div>
-
             <!-- CỘT 2: LIÊN HỆ -->
             <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="footer-title">Liên hệ</h4>
@@ -211,7 +227,6 @@
                     <li>Giờ làm việc: 08h00 - 22h00</li>
                 </ul>
             </div>
-
             <!-- CỘT 3: CHÍNH SÁCH -->
             <div class="col-lg-3 col-md-12 mb-4">
                 <h4 class="footer-title">Chính sách & Điều khoản</h4>
