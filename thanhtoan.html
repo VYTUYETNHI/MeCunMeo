@@ -81,7 +81,251 @@
     </nav>
     <!-- Navbar End -->
 
-    
+    <div class="container py-5">
+    <!-- Tiêu đề trang -->
+    <h2 class="mb-5 mt-4" style="color: #563333; font-weight: 700;">Thanh toán đơn hàng</h2>
+
+    <div class="row g-5">
+        
+        <!-- CỘT TRÁI: THÔNG TIN GIAO HÀNG -->
+        <div class="col-lg-7">
+            <h5 class="mb-3 fw-bold" style="color: #563333;">Thông tin người nhận</h5>
+            
+            <form class="needs-validation">
+                <div class="row g-3">
+                    
+                    <!-- Họ và tên -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="fullName" placeholder="Họ và tên">
+                            <label for="fullName"><i class="fa-solid fa-user me-2"></i>Họ và tên</label>
+                        </div>
+                    </div>
+
+                    <!-- Số điện thoại -->
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="tel" class="form-control" id="phone" placeholder="Số điện thoại">
+                            <label for="phone"><i class="fa-solid fa-phone me-2"></i>Số điện thoại</label>
+                        </div>
+                    </div>
+
+                    <!-- Email (Tùy chọn) -->
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <label for="email"><i class="fa-solid fa-envelope me-2"></i>Email (Để nhận hóa đơn)</label>
+                        </div>
+                    </div>
+
+                    <!-- Địa chỉ: Tỉnh/Thành -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <select class="form-select" id="city">
+                                <option value="" selected>Chọn Tỉnh/Thành</option>
+                                <option value="hcm">TP. Hồ Chí Minh</option>
+                                <option value="hn">Hà Nội</option>
+                                <option value="dn">Đà Nẵng</option>
+                            </select>
+                            <label for="city">Tỉnh / Thành phố</label>
+                        </div>
+                    </div>
+
+                    <!-- Địa chỉ: Quận/Huyện -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <select class="form-select" id="district">
+                                <option value="" selected>Chọn Quận/Huyện</option>
+                                <option value="q1">Quận 1</option>
+                                <option value="q3">Quận 3</option>
+                            </select>
+                            <label for="district">Quận / Huyện</label>
+                        </div>
+                    </div>
+
+                    <!-- Địa chỉ: Phường/Xã -->
+                    <div class="col-md-4">
+                        <div class="form-floating">
+                            <select class="form-select" id="ward">
+                                <option value="" selected>Chọn Phường/Xã</option>
+                            </select>
+                            <label for="ward">Phường / Xã</label>
+                        </div>
+                    </div>
+
+                    <!-- Số nhà/Đường -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="address" placeholder="Số nhà">
+                            <label for="address"><i class="fa-solid fa-location-dot me-2"></i>Số nhà, tên đường</label>
+                        </div>
+                    </div>
+
+                    <!-- Ghi chú -->
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Ghi chú" id="note" style="height: 100px"></textarea>
+                            <label for="note"><i class="fa-regular fa-note-sticky me-2"></i>Ghi chú cho shipper (VD: Giao giờ hành chính)</label>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- CỘT PHẢI: ĐƠN HÀNG & THANH TOÁN -->
+<div class="col-lg-5">
+    <div class="card border-0 shadow-sm rounded-3 bg-light">
+        <div class="card-body p-4">
+            
+            <!-- A. TIÊU ĐỀ + NÚT SỬA -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 fw-bold" style="color: #563333;">Đơn hàng của bạn</h5>
+                <a href="giohang.html" class="text-decoration-none small fw-bold" style="color: #768862;">
+                    <i class="fa-solid fa-pen-to-square"></i> Chỉnh sửa
+                </a>
+            </div>
+
+            <!-- B. DANH SÁCH SẢN PHẨM (Đã sửa lỗi đóng thẻ) -->
+            <div class="order-summary">
+                
+                <!-- Sản phẩm 1 -->
+                <div class="d-flex align-items-center mb-3 bg-white p-2 rounded shadow-sm position-relative product-row">
+                    <!-- Ảnh + Badge -->
+                    <div class="position-relative me-3" style="width: 60px; min-width: 60px;">
+                        <img src="img/giohang-sp1.png" alt="SP1" class="rounded border w-100" style="height: 60px; object-fit: cover;">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark border border-white shadow-sm badge-qty">1</span>
+                    </div>
+                    <!-- Thông tin -->
+                    <div class="flex-grow-1 overflow-hidden px-2">
+                        <h6 class="mb-0 text-dark small fw-bold text-truncate">Open Farm - Hạt cho mèo</h6>
+                        <small class="text-muted d-block" style="font-size: 12px;">Phân loại: Vị Cá Ngừ</small>
+                    </div>
+                    <!-- Giá -->
+                    <span class="text-brown fw-bold small" style="color: #563333; white-space: nowrap;">100.000 đ</span>
+                </div>
+
+                <!-- Sản phẩm 2 -->
+                <div class="d-flex align-items-center mb-3 bg-white p-2 rounded shadow-sm position-relative product-row">
+                    <!-- Ảnh + Badge -->
+                    <div class="position-relative me-3" style="width: 60px; min-width: 60px;">
+                        <img src="img/giohang-sp2.png" alt="SP2" class="rounded border w-100" style="height: 60px; object-fit: cover;">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-dark border border-white shadow-sm badge-qty">2</span>
+                    </div>
+                    <!-- Thông tin -->
+                    <div class="flex-grow-1 overflow-hidden px-2">
+                        <h6 class="mb-0 text-dark small fw-bold text-truncate">Open Farm - Hạt cho mèo</h6>
+                        <small class="text-muted d-block" style="font-size: 12px;">Phân loại: Vị Cá Thu</small>
+                    </div>
+                    <!-- Giá -->
+                    <span class="text-brown fw-bold small" style="color: #563333; white-space: nowrap;">200.000 đ</span>
+                </div>
+
+            </div>
+            <!-- Kết thúc danh sách sản phẩm -->
+            <!-- C. VOUCHER -->
+            <div class="mb-3">
+                <label class="form-label fw-bold">Mã giảm giá</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nhập mã voucher">
+                    <button class="btn btn-outline btn-apply-voucher" type="button" style="color: white; border: none; background-color: #768862">Áp dụng</button>
+                </div>
+            </div>
+
+            <!-- D. VẬN CHUYỂN (Đã thêm class option-box để bo viền) -->
+            <div class="mb-3">
+                <label class="form-label fw-bold">Vận chuyển</label>
+                <div class="option-box bg-white">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input shipping-opt" type="radio" name="shipping" id="shipStandard" value="30000" checked>
+                        <label class="form-check-label d-flex justify-content-between w-100 pe-2" for="shipStandard">
+                            <span>Giao tiêu chuẩn (3-4 ngày)</span>
+                            <span class="fw-bold">30.000 đ</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input shipping-opt" type="radio" name="shipping" id="shipFast" value="50000">
+                        <label class="form-check-label d-flex justify-content-between w-100 pe-2" for="shipFast">
+                            <span>Giao hỏa tốc (Trong ngày)</span>
+                            <span class="fw-bold">50.000 đ</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E. TÍNH TIỀN -->
+            <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Tạm tính</span>
+                <span class="fw-bold">300.000 đ</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <span class="text-muted">Phí vận chuyển</span>
+                <span class="fw-bold" id="shipping-fee">30.000 đ</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+                <span>Giảm giá</span>
+                <span>-0đ</span>
+            </div>
+            
+            <div class="d-flex justify-content-between border-top pt-3 mb-4">
+                <span class="h5 fw-bold" style="color: #563333;">Tổng cộng</span>
+                <span class="h5 fw-bold" id="final-total">330.000 đ</span>
+            </div>
+
+            <!-- F. PHƯƠNG THỨC THANH TOÁN -->
+            <h5 class="mb-3 fw-bold" style="color: #563333;">Phương thức thanh toán</h5>
+            
+            <div class="payment-methods">
+                <!-- COD -->
+                <div class="option-box mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="paymentCOD" checked>
+                        <label class="form-check-label d-flex align-items-center" for="paymentCOD">
+                            <i class="fa-solid fa-money-bill-wave fa-lg me-3 text-success"></i>
+                            <div>
+                                <span class="fw-bold d-block text-dark">Thanh toán khi nhận hàng (COD)</span>
+                                <small class="text-muted" style="font-size: 11px;">Thanh toán tiền mặt cho shipper</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Chuyển khoản -->
+                <div class="option-box mb-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="paymentBank">
+                        <label class="form-check-label d-flex align-items-center" for="paymentBank">
+                            <i class="fa-solid fa-qrcode fa-lg me-3 text-primary"></i>
+                            <div>
+                                <span class="fw-bold d-block text-dark">Chuyển khoản ngân hàng</span>
+                                <small class="text-muted" style="font-size: 11px;">Quét mã QR Code nhanh chóng</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Momo -->
+                 <div class="option-box">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="payment" id="paymentMomo">
+                        <label class="form-check-label d-flex align-items-center" for="paymentMomo">
+                            <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" width="25" class="me-3">
+                            <span class="fw-bold text-dark">Ví điện tử Momo</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- G. NÚT ĐẶT HÀNG -->
+            <button class="btn btn-dark w-100 py-3 mt-4 fw-bold shadow btn-checkout-effect" style="background-color: #563333; border-radius: 50px;">
+                Đặt hàng ngay
+            </button>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
 
     <!-- Footer Start -->
 <footer class="footer-section">

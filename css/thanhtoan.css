@@ -1,0 +1,237 @@
+/* --- TRANG THANH TOÁN --- */
+
+/* 1. Áp dụng font cho toàn bộ trang thanh toán */
+body {
+    font-family: 'Alata', sans-serif !important;
+    font-weight: 500; /* Độ đậm vừa phải cho dễ đọc */
+}
+/* 1. Ép tất cả thẻ tiêu đề (h1 -> h6) đổi font */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4 {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 2. ÉP CÁC Ô NHẬP LIỆU dùng font  */
+input, select, textarea, button, .form-control, .form-select, .btn {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 3. Làm đậm các tiêu đề để phân cấp rõ ràng */
+h2, h5, .fw-bold {
+    font-weight: 700 !important;
+}
+
+/* 4. Chỉnh riêng cho số tiền Tổng cộng nhìn cho "uy tín" */
+#final-total {
+    font-family: 'Alata', sans-serif;
+    font-weight: 800 !important; /* Siêu đậm */
+    letter-spacing: 0.5px; /* Giãn số ra xíu */
+}
+
+
+/* Style cho các ô nhập liệu (Floating Label) */
+.form-floating .form-control, 
+.form-floating .form-select {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+.form-floating .form-control:focus, 
+.form-floating .form-select:focus {
+    border-color: #768862; /* Màu xanh lá khi bấm vào */
+    box-shadow: 0 0 0 0.25rem rgba(118, 136, 98, 0.25);
+}
+/* 1. Tạo khoảng cách bên phải cho ảnh để Badge không bị che */
+.order-item .position-relative {
+    margin-right: 10px; /* Đẩy ra xa một chút để badge số lượng có chỗ đứng */
+}
+
+/* Style cho danh sách sản phẩm thu gọn */
+.order-summary {
+    max-height: 280px; /* Chiều cao tối đa */
+    overflow-y: auto;  /* Tự động cuộn nếu dài */
+    padding-right: 5px; /* Chừa chỗ cho thanh cuộn */
+    padding-top: 10px; /* Chừa chỗ cho badge sản phẩm đầu tiên */
+}
+/* Tùy chỉnh thanh cuộn cho đẹp */
+.order-summary::-webkit-scrollbar { width: 4px; }
+.order-summary::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+/* 2. Dòng sản phẩm */
+.product-row {
+    border-radius: 15px !important; /* Bo cong 15px cho mềm */
+     overflow: visible !important; /* Đảm bảo nội dung không chọc ra ngoài góc bo */
+    border: 1px solid #f0f0f0; /* Thêm cái viền mờ nhìn cho tách biệt */
+    transition: all 0.3s ease;
+    position: relative; 
+}
+.product-row:hover {
+    transform: translateY(-2px); /* Nổi lên nhẹ */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important; /* Bóng đổ đậm hơn */
+    border-color: #768862; /* Viền chuyển màu xanh */
+    z-index: 100;
+}
+
+/* Bo tròn ảnh sản phẩm nhiều hơn chút */
+.product-row img {
+    border-radius: 10px !important;
+}
+
+/* 3. Badge số lượng */
+.badge-qty {
+    background-color: #768862 !important; 
+    color: white !important;
+    border: 2px solid white;
+    
+    font-size: 11px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+/* 4. Tên sản phẩm tự cắt nếu quá dài (...) */
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Style cho ô Phương thức thanh toán (Payment Box) */
+.payment-box {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Khi bấm vào ô thanh toán */
+.payment-box:hover {
+    border-color: #768862;
+    background-color: #f9fdf9;
+}
+
+/* Khi radio button được check, đổi màu viền ô cha */
+.payment-box:has(.form-check-input:checked) {
+    border-color: #563333;
+    background-color: #fff8f5;
+    border-width: 2px;
+}
+
+/* Màu radio button */
+.form-check-input:checked {
+    background-color: #563333;
+    border-color: #563333;
+}
+
+/* --- CĂN GIỮA NÚT RADIO PAYMENT (FIX LỖI LỆCH) --- */
+
+/* 1. Can thiệp vào thẻ cha (.form-check) */
+.payment-methods .form-check {
+    display: flex !important;        /* Ép thành Flexbox để xếp ngang */
+    align-items: center !important;  /* LỆNH QUAN TRỌNG NHẤT: Căn giữa dọc */
+    padding-left: 0 !important;      /* Xóa khoảng trống bên trái mặc định */
+    margin-bottom: 0 !important;
+    min-height: unset !important;
+}
+
+/* 2. Can thiệp vào cái nút tròn (.form-check-input) */
+.payment-methods .form-check-input {
+    float: none !important;          /* Tắt chế độ trôi nổi cũ */
+    margin-left: 0 !important;       /* Xóa margin âm */
+    margin-top: 0 !important;        /* Xóa margin top bị lệch */
+    margin-right: 15px !important;   /* Tạo khoảng cách với phần chữ */
+    
+    width: 20px !important;          /* Tăng kích thước nút cho đẹp */
+    height: 20px !important;
+    flex-shrink: 0 !important;       /* Đảm bảo nút luôn tròn, không bị bóp méo */
+    cursor: pointer;
+}
+
+/* 3. Phần nhãn chứa icon và chữ */
+.payment-methods .form-check-label {
+    width: 100%;
+    cursor: pointer;
+    margin: 0 !important; /* Xóa margin thừa */
+}
+
+/* --- 1. BO TRÒN Ô NHẬP VOUCHER --- */
+/* Bo góc trái của ô nhập liệu */
+.input-group .form-control {
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+}
+
+/* Bo góc phải của nút Áp dụng */
+.input-group .btn {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+/* 4. Khung bao quanh Radio Button (Vận chuyển/Thanh toán) */
+.option-box {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Hiệu ứng khi được chọn */
+.option-box:has(input:checked) {
+    border-color: #563333;
+    background-color: var(--secondary);
+    box-shadow: 0 0 0 1px #563333; /* Viền đậm hơn chút */
+}
+
+
+/* --- HIỆU ỨNG NÚT ÁP DỤNG (VOUCHER) --- */
+.btn-apply-voucher {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Chuyển động mượt */
+    position: relative;
+    overflow: hidden;
+    color: white !important;
+}
+
+/* Khi di chuột vào: Đổi nền xanh, chữ trắng, bay lên */
+.btn-apply-voucher:hover {
+    background-color: #768862 !important; /* Màu xanh thương hiệu */
+    color: black !important;
+    box-shadow: 0 4px 8px rgba(118, 136, 98, 0.3); /* Đổ bóng xanh nhẹ */
+}
+
+/* Khi bấm xuống: Lún xuống tạo cảm giác thật */
+.btn-apply-voucher:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+/* --- HIỆU ỨNG NÚT ĐẶT HÀNG NGAY (CHECKOUT) --- */
+.btn-checkout-effect {
+    position: relative;
+    transition: all 0.4s ease;
+    background-image: linear-gradient(45deg, #563333, #6a4242); /* Gradient nâu nhẹ */
+    background-size: 200% auto; /* Để làm hiệu ứng đổi màu */
+    box-shadow: 0 4px 15px rgba(86, 51, 51, 0.3); /* Bóng nâu mờ ảo */
+    border: none !important;
+}
+
+/* Khi di chuột vào: Nổi lên, bóng đậm hơn, đổi màu nền */
+.btn-checkout-effect:hover {
+    background-position: right center; /* Chạy gradient */
+    transform: translateY(-3px) scale(1.02); /* Phóng to nhẹ 2% */
+    box-shadow: 0 10px 25px rgba(86, 51, 51, 0.5); /* Bóng đổ sâu hơn */
+}
+
+/* Hiệu ứng "Nhịp tim" (Pulse) để thu hút sự chú ý (Tự động chạy) */
+@keyframes pulse-brown {
+    0% { box-shadow: 0 0 0 0 rgba(86, 51, 51, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(86, 51, 51, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(86, 51, 51, 0); }
+}
+
