@@ -3,7 +3,7 @@
 /* 1. Áp dụng font cho toàn bộ trang thanh toán */
 body {
     font-family: 'Alata', sans-serif !important;
-    font-weight: 500; /* Độ đậm vừa phải cho dễ đọc */
+    font-weight: 300; /* Độ đậm vừa phải cho dễ đọc */
 }
 /* 1. Ép tất cả thẻ tiêu đề (h1 -> h6) đổi font */
 h1, h2, h3, h4, h5, h6,
