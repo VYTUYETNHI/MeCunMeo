@@ -1,0 +1,144 @@
+:root {
+  --font-default: "Alata", sans-serif;
+}
+
+h1 {
+  font-size: 5vw;
+  font-weight: 700;
+  font-family: "Verdana", sans-serif;
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: clamp(150px, 30vw, 285px);
+  background: url(../img/background.jpg) center no-repeat;
+  margin: 0;
+}
+
+.breadcrumb bc1:hover,
+nav.breadcrumb a[href]:hover {
+  color: var(--primary) !important;
+}
+
+.breadcrumb {
+  font-size: 20px;
+  font-family: var(--font-default);
+  color: var(--title) !important;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 16px;
+  font-family: var(--font-default);
+  color: var(--primary);
+  text-align: left;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.custom-control {
+  font-size: 16px;
+  font-family: var(--font-default);
+  color: var(--title);
+  font-weight: 200;
+}
+
+.btn {
+  font-size: 16px;
+  font-family: var(--font-default);
+  color: var(--title);
+}
+.dropdown-menu {
+  font-size: 16px;
+  font-family: var(--font-default);
+  color: var(--title);
+}
+
+.product-action a.btn-square:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  border-color: var(--primary);
+  transform: scale(1.1);
+}
+
+.product-action a.btn-square {
+  transition: all 0.3s ease !important;
+}
+
+.product-item .h6 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  line-clamp: 2 !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.6em;
+  max-height: 3.2em !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  width: 100% !important; /* Đảm bảo element có width giới hạn để text wrap */
+  font-family: var(--font-default);
+  color: var(--title);
+}
+
+.product-item img {
+  background-color: white;
+}
+h6 {
+  margin-top: 0;
+  font-family: var(--font-default);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--title);
+}
+
+.page-item {
+  font-family: var(--font-default);
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: var(--title);
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.page-link:hover {
+  z-index: 2;
+  background-color: var(--primary);
+  color: white;
+  scale: 1.02;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-default);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white !important;
+  border-color: var(--title);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: var(--font-default);
+}
+
+h5 span {
+  font-size: 20px;
+  color: var(--title)}

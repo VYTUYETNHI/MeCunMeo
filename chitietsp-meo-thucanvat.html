@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mê Cún Mèo - Thức ăn Organic cho thú cưng</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chitietsp.css" rel="stylesheet">
+    <link href="css/thesanpham.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="top-bar">
+        <!--số điện thoại bên trái-->
+        <div class="top-bar-left">
+            <span>+077 889 9001</span>
+        </div>
+        <!--thông báo ở giữa-->
+        <div class="top-bar-center">
+            <span>Miễn phí vận chuyển cho đơn hàng trên 500.000đ!</span>
+        </div>
+        <!--icon mạng xã hội bên phải--><div class="top-bar-right">
+            <a href="#" class="social-item"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+    <!-- Topbar End -->
+
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 sticky-top">
+            <!--Nút menu trên điện thoại-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <a href="index.html" class="navbar-brand">
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto">
+                <a href="chocun.html" class="nav-item nav-link">Cho Cún</a>
+                <a href="chomeo.html" class="nav-item nav-link">Cho Mèo</a>
+                <a href="gioithieu.html" class="nav-item nav-link">Giới thiệu</a>
+                <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                </div>
+                <div class="navbar-icons d-flex align-items-center">
+                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
+                <span class ="badge-cart">2</span>
+                </a>
+                <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
+        </div>
+                </div>
+            </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Breadcrumb Start -->
+    <div class="breadcrumb">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-white mb-30">
+                    <a class="breadcrumb-item bc1" href="index.html" style="color: #563333">Trang chủ</a>
+                    <a class="breadcrumb-item bc1" href="chomeo.html" style="color: #563333">Sản phẩm cho mèo</a>
+                    <span class="breadcrumb-item">Open Farm – Thức ăn vặt hình khối Cá hồi & Cá thu cho mèo</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <main role="main">
+        <!-- Block content - Đục lỗ trên giao diện bố cục chung, đặt tên là `content` -->
+        <div class="container mt-4">
+            <div id="thongbao" class="alert alert-danger d-none face" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="container-fluid">
+                    <form name="frmsanphamchitiet" id="frmsanphamchitiet" method="post"
+                        action="/php/twig/frontend/giohang/themvaogiohang">
+                        <input type="hidden" name="sp_ma" id="sp_ma" value="5">
+                        <input type="hidden" name="sp_ten" id="sp_ten" value="Open Farm – Thức ăn vặt hình khối Cá hồi & Cá thu cho mèo">
+                        <input type="hidden" name="sp_gia" id="sp_gia" value="100.000">
+                        <input type="hidden" name="hinhdaidien" id="hinhdaidien" value="/MeCunMeo/img/chomeo-sp1.png">
+
+                        <div class="wrapper row">
+                            <div class="preview col-md-6">
+                                <div class="preview-pic tab-content">
+                                    <div class="tab-pane active" id="pic-1">
+                                        <img src="img/chomeo-sp1.png">
+                                    </div>
+                                    <!--<div class="tab-pane" id="pic-2">
+                                        <img src="/MeCunMeo/img/SP Chăm sóc vệ sinh/CHăm sóc vệ sinh cho cún/TROPICALEAN- gel làm sạch răng và giảm mảng bám vị vinalla bạc hà 59ml.jpg">
+                                    </div>
+                                    <div class="tab-pane" id="pic-3">
+                                        <img src="/MeCunMeo/img/SP Chăm sóc vệ sinh/CHăm sóc vệ sinh cho cún/Natural Core- xịt khử mùi trên thú cưng diệt khuẩn hương khuynh diệp 500ml.webp">
+                                    </div> -->
+                                </div>
+                                <!--<ul class="preview-thumbnail nav nav-tabs">
+                                    <li class="active">
+                                        <a data-target="#pic-1" data-toggle="tab" class="active">
+                                            <img src="/MeCunMeo/img/SP Chăm sóc vệ sinh/CHăm sóc vệ sinh cho cún/TROPICALEAN- gel làm sạch răng và giảm mảng bám vị vinalla bạc hà 59ml.jpg">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-2" data-toggle="tab" class="">
+                                            <img src="/MeCunMeo/img/SP Chăm sóc vệ sinh/CHăm sóc vệ sinh cho cún/Natural Core- xịt khử mùi trên thú cưng diệt khuẩn hương khuynh diệp 500ml.webp">
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a data-target="#pic-3" data-toggle="tab" class="">
+                                            <img src="/MeCunMeo/img/SP Chăm sóc vệ sinh/CHăm sóc vệ sinh cho cún/Natural Core- xịt khử mùi trên thú cưng diệt khuẩn hương khuynh diệp 500ml.webp">
+                                        </a>
+                                    </li>
+                                </ul> -->
+                            </div>
+                            <div class="details col-md-6">
+                                <h2 class="product-title">Open Farm – Thức ăn vặt hình khối Cá hồi & Cá thu cho mèo</h2>
+                                <div class="rating">
+                                    <div class="stars">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </div>
+                                    <span class="review-no">3 đánh giá</span>
+                                </div>
+                                <p class="product-description">Thức ăn vặt dạng khối làm từ 100% cá hồi và cá thu tự nhiên, giàu omega-3 hỗ trợ da lông và sức khỏe tổng thể cho mèo.</p>
+                                <small class="text-muted">Giá cũ: <s><span>120.000 vnđ</span></s></small>
+                                <h4 class="price">Giá hiện tại: <span>100.000 vnđ</span></h4>
+                                
+                                <!--<h5 class="sizes">sizes:
+                                    <span class="size" data-toggle="tooltip" title="cỡ Nhỏ">s</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Trung bình">m</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Lớn">l</span>
+                                    <span class="size" data-toggle="tooltip" title="cỡ Đại">xl</span>
+                                </h5>
+                                <h5 class="colors">colors:
+                                    <span class="color orange not-available" data-toggle="tooltip"
+                                        title="Hết hàng"></span>
+                                    <span class="color green"></span>
+                                    <span class="color blue"></span>
+                                </h5>-->
+                                <div class="form-group">
+                                    <label for="soluong">Số lượng đặt mua:</label>
+                                    <input type="number" class="form-control" id="soluong" name="soluong"  min="1" value="1">
+                                </div>
+                                <div class="product-action">
+                                    <a class="btn add-to-cart" href=""><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng </a>
+                                    <a class="btn like" href=""><i class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="container-fluid">
+                    <h2>Thông tin chi tiết về sản phẩm</h2>
+                    <div class="row">
+                        <div class="col">
+                            <p>Open Farm – Thức ăn vặt hình khối Cá hồi & Cá thu cho mèo được làm từ nguồn hải sản tự nhiên, đánh bắt bền vững, đảm bảo độ tươi và an toàn cao cho thú cưng. Công thức chỉ sử dụng cá hồi và cá thu nguyên chất, không chất bảo quản nhân tạo, không phụ phẩm và không hương liệu tổng hợp. <br><br>Kết cấu dạng khối mềm vừa phải, thơm ngon, phù hợp cho cả mèo kén ăn. Hàm lượng omega-3 dồi dào giúp hỗ trợ da lông khỏe mạnh, tăng cường hệ miễn dịch và tốt cho tim mạch. Đây là món thưởng lý tưởng để bổ sung dinh dưỡng hàng ngày hoặc dùng khi huấn luyện mèo. <br><br> Dễ bảo quản và tiện dụng, sản phẩm phù hợp cho mèo ở mọi độ tuổi.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="review-write">
+                <h2>Đánh giá sản phẩm</h2> <br>
+                <form class="review" action="/submit-review" method="POST">
+                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                    <input type="hidden" name="product_id" value="{{productId}}">
+                    <input type="hidden" name="rating" id="rating" value="0">
+                    <h3>Viết đánh giá của bạn</h3>
+                    <!-- Đánh giá sao -->
+                    <div class="form-group">
+                        <div class="star-rating-input" id="Review-rating">
+                        <span class="fa fa-star" data-value="1"></span>
+                        <span class="fa fa-star" data-value="2"></span>
+                        <span class="fa fa-star" data-value="3"></span>
+                        <span class="fa fa-star" data-value="4"></span>
+                        <span class="fa fa-star" data-value="5"></span>
+                        </div>
+                    </div>
+<br>
+                    <!-- Biểu mẫu đánh giá -->
+                    <div class="form-group">
+                        <label for="Review-name">Tên: </label>
+                        <br>
+                        <textarea name="Review-name" id="Review-name" cols="45" rows="1" placeholder="Tên của bạn..." required></textarea> <br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Review-comment">Đánh giá của bạn về sản phẩm này: </label>
+                        <br>
+                        <textarea name="Review-comment" id="Review-comment" cols="45" rows="5" placeholder="Chia sẻ trải nghiệm của bạn..." required></textarea> <br>
+                    </div>
+                    <button type="submit" class="btn">Gửi đánh giá</button>
+            
+                </form>
+                </div>
+
+                    <div class="review-list row">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer">Nguyễn Văn An</div>
+                                <div class="review-date">12/11/2025</div>
+                           </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        <p class="review-text">Sản phẩm rất tốt, giao hàng nhanh, đóng gói cẩn thận. Mình rất hài lòng!</p>
+                        </div>
+                    
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer">Bùi Ngọc Châu</div>
+                                <div class="review-date">01/11/2025</div>
+                           </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        <p class="review-text">Giao hàng nhanh, sản phẩm giống như mô tả. Mèo rất thích ăn!</p>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer">Lê Minh Triết</div>
+                                <div class="review-date">12/11/2025</div>
+                           </div>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        <p class="review-text">Snack rất thơm, bé nhà mình mê lắm. Shop hỗ trợ nhiệt tình.</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+            <div class="container">
+    <h2 class="text-center mb-5 section-title">GỢI Ý SẢN PHẨM</h2>
+       
+
+    
+
+    <!-- BẮT ĐẦU PHẦN GỢI Ý SẢN PHẨM -->
+<div class="container">
+    <div class="row g-4">
+        <!-- SẢN PHẨM 1 -->
+        
+        <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/chomeo-sp2.webp" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-5.6%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ANF 6 Free</div>
+                            <a class="h6 product-title" href="chitietsp-meo-thucankho.html">Thức ăn khô hữu cơ cho mèo trưởng thành 2kg</a>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">425.000đ</span>
+                                <del class="text-muted small">450.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span>
+                                <span class="review-count">(3)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- SẢN PHẨM 2 -->
+         <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/chomeo-sp3.png" alt="Sản phẩm">
+                        <!--<span class="discount-badge bg-danger text-white">-1.5%</span>-->
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">Open farm</div>
+                            <a class="h6 product-title" href="chitietsp-meo-nuochamxuong.html">Nước hầm xương bò cho mèo</a>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">246.000đ</span>
+                                <!--<del class="text-muted small">335.000đ</del>-->
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span>
+                                <span class="review-count">(3)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+
+    </div>
+</div>
+</div>
+        <!-- End block content -->
+    </main>
+
+<!-- KẾT THÚC PHẦN GỢI Ý SẢN PHẨM -->
+
+            <!-- Footer Start -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- CỘT 1: THÔNG TIN THƯƠNG HIỆU -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-logo mb-3">
+                    <!-- Thay ảnh logo của bạn vào đây -->
+                    <img src="img/logo-tron.png" alt="Mê Cún Mèo" style="background: white; border-radius: 50%; height: 100px; width: 100px; object-fit: contain;">
+                </div>
+                <h3 class="footer-heading">Từ yêu thương, tạo nên Mê Cún Mèo</h3>
+                <p class="footer-desc mt-3">
+                    Mê Cún Mèo là nơi bạn tìm thấy những lựa chọn organic thuần khiết dành cho thú cưng - an lành, đáng tin và chan chứa yêu thương.
+                </p>
+            </div>
+
+
+            <!-- CỘT 2: LIÊN HỆ -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h4 class="footer-title">Liên hệ</h4>
+                <ul class="footer-contact-list">
+                    <li>Địa chỉ: 279 Nguyễn Tri Phương, phường Diên Hồng, TP. Hồ Chí Minh</li>
+                    <li>Hotline: 077 889 9001</li>
+                    <li>Email: support@mecunmeo.site</li>
+                    <li>Giờ làm việc: 08h00 - 22h00</li>
+                </ul>
+            </div>
+
+
+            <!-- CỘT 3: CHÍNH SÁCH -->
+            <div class="col-lg-3 col-md-12 mb-4">
+                <h4 class="footer-title">Chính sách & Điều khoản</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách đổi trả & hoàn tiền</a></li>
+                    <li><a href="#">Chính sách vận chuyển & giao hàng</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- DÒNG KẺ NGANG -->
+        <hr class="footer-divider">
+
+
+        <!-- PHẦN DƯỚI: MẠNG XÃ HỘI & COPYRIGHT -->
+        <div class="footer-bottom text-center">
+            <!-- Icon Mạng xã hội -->
+            <div class="footer-socials mb-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+             <!-- DÒNG KẺ NGANG -->
+        <hr class="footer-divider">
+            <!-- Copyright -->
+            <p class="copyright-text">
+                Copyright © 2025 Mê Cún Mèo | All Right reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+    <!-- Footer End -->
+     <p class="float-right">
+                <a href="#">&#8896;</a>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popperjs/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="../assets/js/app.js"></script>
+
+</body>
+</html>

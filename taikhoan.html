@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <title>Mê Cún Mèo - Thức ăn Organic cho thú cưng</title>
@@ -11,83 +12,343 @@
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Alata:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/taikhoan.css" rel="stylesheet">
 </head>
+
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid border-bottom d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-4 text-center py-2">
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
-                    <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Địa chỉ</h6>
-                        <span>279 Nguyễn Tri Phương, phường Diên Hồng, Thành phố Hồ Chí Minh</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center border-start border-end py-2">
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
-                    <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Email</h6>
-                        <span>mecunmeo@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center py-2">
-                <div class="d-inline-flex align-items-center">
-                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
-                    <div class="text-start">
-                        <h6 class="text-uppercase mb-1">HOTLINE</h6>
-                        <span>+012 345 6789</span>
-                    </div>
-                </div>
-            </div>
+    <div class="top-bar">
+        <!--số điện thoại bên trái-->
+        <div class="top-bar-left">
+            <span>+077 889 9001</span>
+        </div>
+        <!--thông báo ở giữa-->
+        <div class="top-bar-center">
+            <span>Miễn phí vận chuyển cho đơn hàng trên 500.000đ!</span>
+        </div>
+        <!--icon mạng xã hội bên phải-->
+        <div class="top-bar-right">
+            <a href="#" class="social-item"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </div>
+</div>
     <!-- Topbar End -->
 
 
+
+
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
-        <a href="index.html" class="navbar-brand ms-lg-5">
-         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid" style="height:100 px; max-width: 100px;">   
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 sticky-top">
+            <!--Nút menu trên điện thoại-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <a href="index.html" class="navbar-brand">
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto py-0">
+            <div class="navbar-nav mx-auto">
                 <a href="chocun.html" class="nav-item nav-link">Cho Cún</a>
                 <a href="chomeo.html" class="nav-item nav-link">Cho Mèo</a>
                 <a href="gioithieu.html" class="nav-item nav-link">Giới thiệu</a>
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-nav ms-auto py-0">
-                <a href="#" class="nav-link"><i class="bi bi-search fs-5"></i></a>
-                <a href="giohang.html" class="nav-link"><i class="bi bi-cart fs-5"></i></a>
-                <a href="taikhoan.html" class="nav-link"><i class="bi bi-person fs-5"></i></a>
+                <div class="navbar-icons d-flex align-items-center">
+                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
+                <span class ="badge-cart">2</span>
+                </a>
+                <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
         </div>
                 </div>
             </div>
-        </div>
     </nav>
     <!-- Navbar End -->
+   
+    
+    <div class="container py-5">
+    <div class="row g-5">
+        
+        <!-- ================= KHUNG TRÁI: SIDEBAR MENU ================= -->
+        <div class="col-lg-3">
+            <div class="account-sidebar bg-white p-4 rounded-4 shadow-sm h-100">
+                
+                <!-- Avatar & Tên -->
+                <div class="profile-header text-center mb-4">
+                    <div class="position-relative d-inline-block">
+                        <img src="img/taikhoan-avatar.jpg" alt="Avatar" class="rounded-circle border border-2 border-white shadow-sm mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        <!-- Nút đổi ảnh nhỏ xíu -->
+                        <button class="btn btn-sm btn-circle position-absolute bottom-0 end-0 bg-white shadow-sm" style="color: #563333;">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                    </div>
+                    <h5 class="fw-bold mb-1" style="color: #563333;">Nguyễn Văn A</h5>
+                    <a href="#" class="text-decoration-none small" style="color: #768862;">
+                        <i class="fa-solid fa-pen"></i> Sửa hồ sơ
+                    </a>
+                </div>
+
+                <hr class="text-muted opacity-25">
+
+                <!-- Menu điều hướng -->
+                <div class="sidebar-menu">
+                    <a href="#" class="menu-link active">
+                        <i class="fa-regular fa-user me-3"></i> Hồ sơ của tôi
+                    </a>
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-location-dot me-3"></i> Địa chỉ nhận hàng
+                    </a>
+                    <a href="#" class="menu-link">
+                        <i class="fa-regular fa-credit-card me-3"></i> Ngân hàng / Thẻ
+                    </a>
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-box-open me-3"></i> Đơn mua
+                    </a>
+                    <a href="#" class="menu-link">
+                        <i class="fa-solid fa-ticket me-3"></i> Kho Voucher
+                    </a>
+                    
+                    <!-- Nút Đăng xuất -->
+                    <a href="#" class="menu-link text-danger mt-3">
+                        <i class="fa-solid fa-arrow-right-from-bracket me-3"></i> Đăng xuất
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= KHUNG PHẢI: NỘI DUNG CHÍNH ================= -->
+        <div class="col-lg-9">
+            
+            <!-- PHẦN 1: HỒ SƠ NGƯỜI DÙNG -->
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4 p-lg-5">
+                    <h4 class="fw-bold mb-4" style="color: #563333;">Hồ sơ của tôi</h4>
+                    
+                    <form>
+                        <div class="row g-3">
+                            <!-- Tên đăng nhập (Không cho sửa) -->
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold small">Tên đăng nhập</label>
+                                <input type="text" class="form-control" value="nguyenvana123" disabled style="background-color: #f8f9fa;">
+                            </div>
+
+                            <!-- Họ và tên -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Họ và tên</label>
+                                <input type="text" class="form-control" value="Nguyễn Văn A">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Email</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" value="nguyenvana@gmail.com">
+                                    <span class="input-group-text bg-white small">Đã xác thực</span>
+                                </div>
+                            </div>
+
+                            <!-- Số điện thoại -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Số điện thoại</label>
+                                <input type="tel" class="form-control" value="0909 123 456">
+                            </div>
+
+                            <!-- Ngày sinh -->
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold small">Ngày sinh</label>
+                                <input type="date" class="form-control" value="1999-01-01">
+                            </div>
+
+                            <!-- Giới tính -->
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold small d-block">Giới tính</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" checked>
+                                    <label class="form-check-label" for="male">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female">
+                                    <label class="form-check-label" for="female">Nữ</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="other">
+                                    <label class="form-check-label" for="other">Khác</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- PHẦN 2: HỒ SƠ THÚ CƯNG (PET PROFILE) -->
+            <div class="card border-0 shadow-sm rounded-4 position-relative overflow-hidden">
+                <!-- Đường viền màu trang trí trên đầu -->
+                <div class="position-absolute top-0 start-0 w-100" style="height: 5px; background: linear-gradient(to right, #563333, #768862);"></div>
+                
+                <div class="card-body p-4 p-lg-5">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold mb-0" style="color: #563333;"><i class="fa-solid fa-paw me-2"></i>Hồ sơ Boss</h4>
+                        <button class="btn btn-add-pet rounded-pill"><i class="fa-solid fa-plus"></i> Thêm bé mới</button>
+                    </div>
+
+                    <!-- Form thông tin Pet -->
+                    <div class="bg-white p-4 rounded-3">
+                        <div class="row g-3">
+                            <!-- Ảnh Pet -->
+                            <div class="col-md-3 text-center">
+                                <div class="ratio ratio-1x1 mb-2">
+                                    <img src="img/taikhoan-avatarpet.jpg" alt="Pet" class="rounded-3 object-fit-cover border">
+                                </div>
+                                <button class="btn btn-sm btn-white border shadow-sm w-100">Chọn ảnh</button>
+                            </div>
+
+                            <!-- Thông tin Pet -->
+                            <div class="col-md-9">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold small">Tên bé (Nickname)</label>
+                                        <input type="text" class="form-control" placeholder="VD: Miu, Lu...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold small">Loại thú cưng</label>
+                                        <select class="form-select">
+                                            <option selected>Chọn loại</option>
+                                            <option value="dog">Cún (Chó)</option>
+                                            <option value="cat">Mèo</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold small">Giống loài</label>
+                                        <input type="text" class="form-control" placeholder="VD: Corgi, Mèo Anh...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-bold small">Ngày sinh (hoặc ngày đón)</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-bold small d-block">Giới tính</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="petGender" id="petMale">
+                                            <label class="form-check-label" for="petMale">Đực (Boy)</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="petGender" id="petFemale">
+                                            <label class="form-check-label" for="petFemale">Cái (Girl)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút Lưu chung -->
+                    <div class="mt-4 text-end">
+                        <button class="btn btn-primary px-5 py-2 shadow-sm btn-savechange">Lưu thay đổi</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer Start -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- CỘT 1: THÔNG TIN THƯƠNG HIỆU -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-logo mb-3">
+                    <!-- Thay ảnh logo của bạn vào đây -->
+                    <img src="img/logo-tron.png" alt="Mê Cún Mèo" style="background: white; border-radius: 50%; height: 100px; width: 100px; object-fit: contain;">
+                </div>
+                <h3 class="footer-heading">Từ yêu thương, tạo nên Mê Cún Mèo</h3>
+                <p class="footer-desc mt-3">
+                    Mê Cún Mèo là nơi bạn tìm thấy những lựa chọn organic thuần khiết dành cho thú cưng - an lành, đáng tin và chan chứa yêu thương.
+                </p>
+            </div>
+
+
+            <!-- CỘT 2: LIÊN HỆ -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h4 class="footer-title">Liên hệ</h4>
+                <ul class="footer-contact-list">
+                    <li>Địa chỉ: 279 Nguyễn Tri Phương, phường Diên Hồng, TP. Hồ Chí Minh</li>
+                    <li>Hotline: 077 889 9001</li>
+                    <li>Email: support@mecunmeo.site</li>
+                    <li>Giờ làm việc: 08h00 - 22h00</li>
+                </ul>
+            </div>
+
+
+            <!-- CỘT 3: CHÍNH SÁCH -->
+            <div class="col-lg-3 col-md-12 mb-4">
+                <h4 class="footer-title">Chính sách & Điều khoản</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách đổi trả & hoàn tiền</a></li>
+                    <li><a href="#">Chính sách vận chuyển & giao hàng</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- DÒNG KẺ NGANG -->
+        <hr class="footer-divider">
+
+
+        <!-- PHẦN DƯỚI: MẠNG XÃ HỘI & COPYRIGHT -->
+        <div class="footer-bottom text-center">
+            <!-- Icon Mạng xã hội -->
+            <div class="footer-socials mb-3">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+             <!-- DÒNG KẺ NGANG -->
+        <hr class="footer-divider">
+            <!-- Copyright -->
+            <p class="copyright-text">
+                Copyright © 2025 Mê Cún Mèo | All Right reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+   
+
+
+
+
+
+

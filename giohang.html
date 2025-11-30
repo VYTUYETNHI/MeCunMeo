@@ -28,6 +28,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/giohang.css" rel="stylesheet">
+    <link href="css/thesanpham.css" rel="stylesheet">
 </head>
 
 <body>
@@ -205,219 +206,162 @@
 
 
 
-<!-- PHẦN GỢI Ý SẢN PHẨM -->
-<div class="container py-5">
-    
-    <!-- Tiêu đề có trang trí -->
+<!-- List sản phẩm -->
+<section class="featured-products py-5 mt-5 bg-white">
+    <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 style="color: #563333; font-weight: 700; font-family: 'Alata', sans-serif;">Có thể Boss sẽ thích</h3>
-        <a href="shop.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-
-    <div class="row g-4">
-        
-        <!-- Sản phẩm 1 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <!-- Ảnh sản phẩm -->
-                    <img src="img/giohang-sp3.png" class="card-img-top" alt="Sản phẩm 1">
-                    
-                    <!-- Nhãn giảm giá (nếu có) -->
-                    <span class="badge bg-danger position-absolute top-0 start-0 m-3">-10%</span>
-
-                    <!-- Nút hành động hiện khi Hover -->
-                    <div class="product-action">
-                        <a href="#" class="btn-action" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action" title="Xem nhanh"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Natural Core - Thịt vịt sấy khô cho Mèo</a>
-                    </h6>
-                    <div class="d-flex justify-content-center align-items-center gap-2 mt-2">
-                        <span class="text-danger fw-bold">85.000đ</span>
-                        <span class="text-muted text-decoration-line-through small">95.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 2 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp4.png" class="card-img-top" alt="Sản phẩm 2">
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Open Farm - Topper nước hầm Gà tây cho cả Cún Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">12.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 3 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp5.png" class="card-img-top" alt="Sản phẩm 3">
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Open Farm - Bánh quy vị Cá ngừ cho Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">45.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 4 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp6.png" class="card-img-top" alt="Sản phẩm 4">
-                    <span class="badge bg-success position-absolute top-0 start-0 m-3">Mới</span>
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Natural Core - Thịt Gà tây sấy khô phô mai cho Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">150.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<!--Sản phẩm đã xem gần đây-->
-<div class="container py-5">
     
-    <!-- Tiêu đề có trang trí -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 style="color: #563333; font-weight: 700; font-family: 'Alata', sans-serif;">Sản phẩm đã xem gần đây</h3>
-        <a href="shop.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
+    <!-- Tiêu đề -->
+    <h2 class="m-0" style="color: #563333; font-weight: 700;">
+        Có thể boss sẽ thích
+    </h2>
 
-    <div class="row g-4">
-        
-        <!-- Sản phẩm 1 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <!-- Ảnh sản phẩm -->
-                    <img src="img/giohang-sp7.jpg" class="card-img-top" alt="Sản phẩm 1">
-                    
-                    <!-- Nhãn giảm giá (nếu có) -->
-                    <span class="badge bg-danger position-absolute top-0 start-0 m-3">-10%</span>
+    <!-- Link nằm bên phải -->
+    <a href="index.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">
+        Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i>
+    </a>
 
-                    <!-- Nút hành động hiện khi Hover -->
-                    <div class="product-action">
-                        <a href="#" class="btn-action" title="Thêm vào giỏ"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action" title="Xem nhanh"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Natural Core - Thịt vịt sấy khô cho Mèo</a>
-                    </h6>
-                    <div class="d-flex justify-content-center align-items-center gap-2 mt-2">
-                        <span class="text-danger fw-bold">85.000đ</span>
-                        <span class="text-muted text-decoration-line-through small">95.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 2 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp8.webp" class="card-img-top" alt="Sản phẩm 2">
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Open Farm - Topper nước hầm Gà tây cho cả Cún Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">12.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 3 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp9.avif" class="card-img-top" alt="Sản phẩm 3">
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Open Farm - Bánh quy vị Cá ngừ cho Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">45.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sản phẩm 4 -->
-        <div class="col-6 col-md-3">
-            <div class="product-card card border-0 shadow-sm h-100">
-                <div class="position-relative overflow-hidden">
-                    <img src="img/giohang-sp10.jpg" class="card-img-top" alt="Sản phẩm 4">
-                    <span class="badge bg-success position-absolute top-0 start-0 m-3">Mới</span>
-                    <div class="product-action">
-                        <a href="#" class="btn-action"><i class="fa-solid fa-cart-plus"></i></a>
-                        <a href="#" class="btn-action"><i class="fa-solid fa-eye"></i></a>
-                    </div>
-                </div>
-                <div class="card-body text-center">
-                    <h6 class="card-title">
-                        <a href="#" class="text-decoration-none text-dark">Natural Core - Thịt Gà tây sấy khô phô mai cho Mèo</a>
-                    </h6>
-                    <div class="mt-2">
-                        <span class="text-brown fw-bold" style="color: #563333;">150.000đ</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </div>
+        <div class="row g-4 justify-content-center">
+
+
+            <!-- Sản phẩm 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/giohang-sp3.png" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-13%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">Viva Raw</div>
+                            <h6 class="product-title">Thịt vịt cho mèo</h6>
+                           
+                            <div class="price text-center mb-2">
+                                <span class="price-current">260.000đ</span>
+                                <del class="text-muted small">300.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span>
+                                <span class="review-count">(12)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Sản phẩm 2 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/giohang-sp4.png" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 3 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/giohang-sp5.png" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 4 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/giohang-sp6.png" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!-- Footer Start -->
