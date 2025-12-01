@@ -37,10 +37,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-.product-card:hover .product-img img {
-    transform: scale(1.1);
-}
-
 .product-title {
     font-family: 'Alata', sans-serif !important; 
     font-size: 1.1rem;
@@ -154,4 +150,36 @@ body {
     font-weight: 900 !important; 
     transform: scale(1.2);    
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+/* --- SỬA LỖI HIỆU ỨNG THẺ SẢN PHẨM --- */
+
+.product-card {
+    /* 1. Định dạng cơ bản cho khung */
+    background: #fff !important; /* Đặt nền trắng (để khi đổ bóng mới thấy đẹp) */
+    border: 1px solid transparent !important; /* Viền trong suốt lúc đầu */
+    border-radius: 20px; /* Bo tròn các góc giống hình mẫu */
+    padding: 20px;       /* Khoảng cách đệm bên trong */
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+    
+    /* Reset lại box-shadow để lúc chưa hover thì nó phẳng */
+    box-shadow: none; 
+}
+
+/* 2. QUAN TRỌNG: Hiệu ứng khi di chuột vào khung thẻ */
+.product-card:hover {
+    transform: translateY(-10px); /* Bay lên 10px */
+    box-shadow: 0 15px 35px rgba(118, 136, 98, 0.2) !important; /* Đổ bóng màu xanh rêu nhạt */
+    border-color: #f0f0f0 !important; /* Hiện viền mờ nhẹ */
+    z-index: 10; /* Nổi lên trên các phần tử khác */
+}
+
+/* 3. Sửa lại khung chứa ảnh để không bị đè lên padding của card */
+.product-img {
+    margin-bottom: 15px !important; /* Cách phần chữ ra một chút */
+    background-color: transparent !important;
+}
+
+/* 4. Giữ nguyên hiệu ứng zoom ảnh của bạn (Rất đẹp) */
+.product-card:hover .product-img img {
+    transform: scale(1.1);
 }

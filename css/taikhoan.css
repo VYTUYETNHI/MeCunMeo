@@ -141,3 +141,8 @@ h1, h2, h3, h4, h5, h6, .fw-bold, strong, b {
     border-color: #5d6e4b !important;
     box-shadow: 0 4px 10px rgba(118, 136, 98, 0.4); /* Bóng đổ xanh */
 }
+
+.text-verified {
+    color: #768862 !important; 
+    background-color: transparent !important; 
+}

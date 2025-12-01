@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PET SHOP - Pet Shop Website Template</title>
+    <title>Mê Cún Mèo - Thức ăn Organic cho thú cưng</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -80,160 +80,139 @@
     </nav>
     <!-- Navbar End -->
 
-   <!-- Hero Start -->
-<div class="trangchu-hero">
-    <div class="container pt-2 pt-lg-4 pb-5">
-        <div class="row align-items-center min-vh-100 min-vh-lg-75">
-            <!-- Cột chữ bên trái -->
-            <div class="col-lg-6 text-center text-lg-start">
-                <p class="text-success fw-medium mb-3">Chào mừng bạn đến với Mê Cún Mèo!</p>
-                <h1 class="display-3 fw-bold text-dark mb-4" style="line-height: 1.2;">
-                    Nơi thuần khiết nuôi<br>dưỡng yêu thương
+<!-- Hero Start -->
+<div class="trangchu-hero d-flex align-items-center">
+    <div class="container position-relative z-2"> <!-- z-2 để nổi lên trên nền sóng -->
+        <div class="row align-items-center">
+            
+            <!-- CỘT CHỮ BÊN TRÁI -->
+            <!-- ps-lg-5: Đẩy lề trái vào một chút cho cân -->
+            <div class="col-lg-6 text-center text-lg-start ps-lg-5">
+                
+                <p class="text-welcome mb-2 fs-4" style="color: #768862 !important; font-weight:600; letter-spacing: 1px;">
+                    Chào mừng bạn đến với Mê Cún Mèo!
+                </p>
+                
+                <!-- Tiêu đề: Ngắt dòng đúng chỗ, màu nâu đậm -->
+                <h1 class="display-3 fw-bold text-brown mb-3 hero-title">
+                    Nơi thuần khiết <br> nuôi dưỡng yêu thương
                 </h1>
-                <p class="fs-5 text-secondary mb-4">
+                
+                <!-- Mô tả: Chữ to hơn (fs-5), màu nâu nhạt -->
+                <p class="fs-5 text-brown mb-5 opacity-75">
                     Thức ăn organic cho thú cưng – sạch, lành và đầy yêu thương.
                 </p>
-                <a href="gioithieu.html" class="btn btn-success btn-lg rounded-pill px-5 py-3 shadow-sm">
+                
+                <!-- Nút bấm dạng Outline (Viền) -->
+                <a href="gioithieu.html" class="btn btn-hero-outline rounded-pill px-4 py-2 fw-bold">
                     Tìm hiểu thêm
                 </a>
             </div>
 
-            <!-- Cột hình bên phải -->
-            <div class="col-lg-6 text-center">
-                <img src="img/trangchu-hero.png" alt="Mê Cún Mèo" class="img-fluid hero-dogcat">
+            <!-- CỘT HÌNH BÊN PHẢI -->
+            <!-- text-lg-end: Đẩy hình sang phải. pe-lg-5: Đẩy lề phải vào cho cân -->
+            <div class="col-lg-6 text-center text-lg-end pe-lg-5">
+                <img src="img/trangchu-hero.png" alt="Mê Cún Mèo" class="img-fluid trangchu-hero-dogcat">
             </div>
         </div>
+    </div>
+
+    <!-- LỚP SÓNG CONG Ở ĐÁY -->
+    <div class="hero-wave">
+        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#ffffff" fill-opacity="1" d="M0,224L80,213.3C160,203,320,181,480,181.3C640,181,800,203,960,224C1120,245,1280,267,1360,277.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
     </div>
 </div>
 <!-- Hero End -->
 
 <!-- Category Section Start -->
-<div class="py-5 bg-white">
+<div class="py-4 bg-white">
     <div class="container">
         <!-- Tiêu đề -->
-        <h2 class="text-center mb-5 fw-bold" style="color: #563333; font-size: 2.5rem;">
-            Tìm món boss thích tại đây
+        <h2 class="text-center mb-4 fw-bold" style="color: #563333; font-size: 2.5rem;">
+            Tìm món Boss thích tại đây
         </h2>
-
-        <div class="row g-2 justify-content-center">
-            <!-- Ô 1: Thức ăn cún -->
-            <div class="col-6 col-md-3">
-                <a href="chocun.html" class="text-decoration-none">
-                    <div class="category-card text-center">
-                        <div class="icon mb-3">
-                            <img src="img/trangchu-ct2.png" alt="Cho Cún">
-                        </div>
-                        <p class="text-white mb-0">Thức ăn hữu cơ<br>cho cún</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Ô 2: Thức ăn mèo -->
-            <div class="col-6 col-md-3">
-                <a href="chomeo.html" class="text-decoration-none">
-                    <div class="category-card text-center">
-                        <div class="icon mb-3">
-                            <img src="img/trangchu-ct1.png" alt="Cho Mèo">
-                        </div>
-                        <p class="text-white mb-0">Thức ăn hữu cơ<br>cho mèo</p>
-                    </div>
-                </a>
-            </div>
+        <div class="row g-5 justify-content-center mt-1">
+            <!-- THẺ 1: CHO CÚN -->
+        <div class="col-md-6 col-lg-5">
+            <a href="chocun.html" class="category-card d-flex align-items-center text-decoration-none">
+                <!-- Hình bên trái -->
+                <div class="icon-box me-4">
+                    <img src="img/trangchu-ct2.png" alt="Cho Cún" class="img-fluid">
+                </div>
+                <!-- Chữ bên phải -->
+                <div class="text-box text-start">
+                    <h4 class="mb-1 text-white fw-bold">Thức ăn hữu cơ</h4>
+                    <p class="mb-0 text-white opacity-75">Dành cho Cún cưng</p>
+                </div>
+            </a>
         </div>
+
+        <!-- THẺ 2: CHO MÈO -->
+        <div class="col-md-6 col-lg-5">
+            <a href="chomeo.html" class="category-card d-flex align-items-center text-decoration-none">
+                <!-- Hình bên trái -->
+                <div class="icon-box me-4">
+                    <img src="img/trangchu-ct1.png" alt="Cho Mèo" class="img-fluid">
+                </div>
+                <!-- Chữ bên phải -->
+                <div class="text-box text-start">
+                    <h4 class="mb-1 text-white fw-bold">Thức ăn hữu cơ</h4>
+                    <p class="mb-0 text-white opacity-75">Dành cho Mèo cưng</p>
+                </div>
+            </a>
+        </div>
+
     </div>
+</div>
 </div>
 <!-- Category Section End -->
 
-<!-- Experience Section Start -->
-<div class="experience-section py-5">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <!-- Hình cún mèo bên trái -->
-            <div class="col-lg-6 text-center text-lg-start">
-                <img src="img/trangchu-decor1.png" alt="Mê Cún Mèo - Gần gũi & ấm áp" class="img-fluid experience-img">
-            </div>
-
-            <!-- Nội dung bên phải -->
-            <div class="col-lg-6">
-                <h2 class="display-5 fw-bold mb-4" style="color: #768862;">
-                    Trải nghiệm mua sắm gần gũi, ấm áp
-                </h2>
-                <p class="fs-5 text-secondary mb-4">
-                    Nơi mọi điều nhỏ bé đều xuất phát từ tình thương dành cho những người bạn nhỏ.
-                </p>
-                <a href="cuahang.html" class="btn btn-success btn-lg rounded-pill px-5 py-3 shadow-sm fw-medium">
-                    Bắt đầu ngay
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Experience Section End -->
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Modal End -->
-
 <!-- Brands Section Start -->
-<section class="brands-section py-5">
+<section class="brands-section py-5 mt-5">
     <div class="container">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center justify-content-between g-5">
             <!-- Bên trái: tiêu đề + mô tả + nút -->
             <div class="col-lg-5">
                 <h2 class="display-5 fw-bold mb-4" style="color: #563333; line-height: 1.3;">
-                    Nơi hội tụ các thương hiệu organic đáng tin cậy cho thú cưng
+                    Nơi hội tụ các <br> thương hiệu organic <br> đáng tin cậy 
                 </h2>
-                <p class="fs-6 text-muted mb-4" style="color: #768862 !important; line-height: 1.7;">
+                <p class="fs-5 text-muted mb-4" style="color: #563333 !important; line-height: 1.7;">
                     Tại Mê Cún Mèo, bạn có thể tìm thấy từ thức ăn hạt hữu cơ, 
                     thức ăn tươi nấu chín đến snack bổ dưỡng – tất cả đều đến từ 
                     các thương hiệu quốc tế uy tín và đã được kiểm chứng.
                 </p>
-                <a href="thuonghieu.html" class="btn btn-explore rounded-pill px-5 py-3">
+                <a href="thuonghieu.html" class="btn btn-start-outline rounded-pill px-4 py-2">
                     Khám phá ngay
                 </a>
             </div>
 
             <!-- Bên phải: carousel thương hiệu -->
-            <div class="col-lg-7 position-relative">
+            <div class="col-lg-6 position-relative">
                 <div class="owl-carousel owl-theme brands-carousel">
                     <div class="item text-center">
-                        <img src="img/trangchu-br1.png" alt="Natural Core" class="brand-logo">
+                        <img src="img/trangchu-br1.png" alt="Natural Core" class="brand-logo-large">
                         <p class="brand-name">Natural Core</p>
                         <small>Balanced Nutrition Formula</small>
                     </div>
                     <div class="item text-center">
-                        <img src="img/trangchu-br2.png" alt="Ziwi Peak" class="brand-logo">
+                        <img src="img/trangchu-br2.png" alt="Ziwi Peak" class="brand-logo-large">
                         <p class="brand-name">Ziwi Peak</p>
                         <small>New Zealand Air-Dried</small>
                     </div>
                     <div class="item text-center">
-                        <img src="img/trangchu-br3.png" alt="Orijen" class="brand-logo">
+                        <img src="img/trangchu-br3.png" alt="Orijen" class="brand-logo-large">
                         <p class="brand-name">Orijen</p>
                         <small>Biologically Appropriate</small>
                     </div>
                     <div class="item text-center">
-                        <img src="img/trangchu-br5.png" alt="Acana" class="brand-logo">
+                        <img src="img/trangchu-br5.png" alt="Acana" class="brand-logo-large">
                         <p class="brand-name">Acana</p>
                         <small>Heritage Foods</small>
                     </div>
                     <div class="item text-center">
-                        <img src="img/trangchu-br4.png" alt="Taste of the Wild" class="brand-logo">
+                        <img src="img/trangchu-br4.png" alt="Taste of the Wild" class="brand-logo-large">
                         <p class="brand-name">Taste of the Wild</p>
                         <small>Grain-Free Formula</small>
                     </div>
@@ -252,18 +231,173 @@
 </section>
 <!-- Brands Section End -->
 
-<!-- List sản phẩm -->
+<!-- List sản phẩm cho cún-->
 <section class="featured-products py-5 mt-5 bg-white">
     <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
 
     <!-- Tiêu đề -->
-    <h2 class="m-0" style="color: #563333; font-weight: 700;">
-        Có thể boss sẽ thích
+    <h2 class="m-0" style="color: #563333; font-weight: 700; font-size: 2.5rem">
+        Các sản phẩm Cún mê
     </h2>
     <!-- Link nằm bên phải -->
-    <a href="index.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">
-        Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i>
+    <a href="chocun.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">
+        Xem thêm <i class="fa-solid fa-arrow-right ms-1"></i>
+    </a>
+
+</div>
+        <div class="row g-4 justify-content-center">
+            <!-- Sản phẩm 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/trangchu-sp6.webp" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-13%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">Viva Raw</div>
+                            <h6 class="product-title">Thịt vịt cho cún</h6>
+                           
+                            <div class="price text-center mb-2">
+                                <span class="price-current">260.000đ</span>
+                                <del class="text-muted small">300.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </span>
+                                <span class="review-count">(12)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- Sản phẩm 2 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/trangchu-sp7.jpg" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho cún – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 3 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/trangchu-sp8.webp" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho cún – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sản phẩm 4 -->
+             <div class="col-6 col-md-4 col-lg-3">
+                <div class="product-card h-100 d-flex flex-column">
+                    <div class="product-img">
+                        <img src="img/trangchu-sp9.png" alt="Sản phẩm">
+                        <span class="discount-badge bg-danger text-white">-3%</span>
+                    </div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                        <div class="text-center">
+                            <div class="product-brand">ACANA</div>
+                            <h6 class="product-title">Thức ăn ướt cho cún – Vị Cá biển</h6>
+                            <div class="price text-center mb-2">
+                                <span class="price-current">290.000đ</span>
+                                <del class="text-muted small">299.000đ</del>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <span class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="review-count">(45)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-add-cart">
+                                Thêm vào giỏ
+                            </button>
+                            <button type="button" class="love-btn d-block mx-auto border-0 bg-transparent">
+                                <i class="far fa-heart"></i> Yêu thích
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- List sản phẩm cho mèo-->
+<section class="featured-products py-5 mt-3 bg-white">
+    <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+    <!-- Tiêu đề -->
+    <h2 class="m-0" style="color: #563333; font-weight: 700; font-size:2.5rem">
+        Các sản phẩm Mèo mê
+    </h2>
+    <!-- Link nằm bên phải -->
+    <a href="chomeo.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">
+        Xem thêm <i class="fa-solid fa-arrow-right ms-1"></i>
     </a>
 
 </div>
@@ -314,7 +448,7 @@
                     <div class="flex-grow-1 d-flex flex-column justify-content-between">
                         <div class="text-center">
                             <div class="product-brand">ACANA</div>
-                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <h6 class="product-title">Thức ăn ướt cho mèo – Vị Cá biển</h6>
                             <div class="price text-center mb-2">
                                 <span class="price-current">290.000đ</span>
                                 <del class="text-muted small">299.000đ</del>
@@ -347,7 +481,7 @@
                     <div class="flex-grow-1 d-flex flex-column justify-content-between">
                         <div class="text-center">
                             <div class="product-brand">ACANA</div>
-                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <h6 class="product-title">Thức ăn ướt cho mèo – Vị Cá biển</h6>
                             <div class="price text-center mb-2">
                                 <span class="price-current">290.000đ</span>
                                 <del class="text-muted small">299.000đ</del>
@@ -380,7 +514,7 @@
                     <div class="flex-grow-1 d-flex flex-column justify-content-between">
                         <div class="text-center">
                             <div class="product-brand">ACANA</div>
-                            <h6 class="product-title">Thức ăn ướt cho chó – Vị Cá biển</h6>
+                            <h6 class="product-title">Thức ăn ướt cho mèo – Vị Cá biển</h6>
                             <div class="price text-center mb-2">
                                 <span class="price-current">290.000đ</span>
                                 <del class="text-muted small">299.000đ</del>
@@ -407,16 +541,42 @@
     </div>
 </section>
 
+<!-- Experience Section Start -->
+<div class="experience-section py-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center justify-content-between g-5">
+            <!-- Hình cún mèo bên trái -->
+            <div class="col-lg-5 text-center text-lg-start">
+                <img src="img/trangchu-decor1.png" alt="Mê Cún Mèo - Gần gũi & ấm áp" class="img-fluid experience-img">
+            </div>
+
+            <!-- Nội dung bên phải -->
+            <div class="col-lg-7">
+                <h2 class="display-5 fw-bold" style="color: #563333;">
+                    Trải nghiệm mua sắm gần gũi, <br> ấm áp
+                </h2>
+                <p class="fs-5 text-secondary mb-4">
+                    Nơi mọi điều nhỏ bé đều xuất phát từ tình thương dành cho những <br> người bạn nhỏ.
+                </p>
+                <a href="cuahang.html" class="btn btn-start-outline btn-lg rounded-pill px-4 py-2 fw-bold">
+                    Bắt đầu ngay
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Experience Section End -->
+
 <!-- Testimonials Section Start -->
-<section class="testimonials-section py-5">
+<section class="testimonials-section">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold" style="color: #563333;">
-                Yêu thương được lan tỏa
+            <h2 class="display-5 fw-bold" style="color: #563333; font-size: 2.5rem;">
+                Lan tỏa yêu thương
             </h2>
         </div>
 
-        <div class="row g-4 g-lg-5 justify-content-center">
+        <div class="row g-4 g-lg-5 justify-content-center mt-5">
             <!-- Khách 1 -->
             <div class="col-md-4">
                 <div class="testimonial-item text-center">
@@ -445,7 +605,7 @@
             <div class="col-md-4">
                 <div class="testimonial-item text-center">
                     <img src="img/trangchu-fb3.jpg" alt="Chị Phương - chủ shop nhỏ" class="testimonial-img mb-4">
-                    <h5 class="fw-bold" style="color: #563333;">Chị Phương – chủ shop nhỏ nhận nuôi mèo hoang</h5>
+                    <h5 class="fw-bold" style="color: #563333;">Chị Phương – chủ shop nhỏ <br> nhận nuôi mèo hoang</h5>
                     <p class="testimonial-text">
                         “Mình chăm hơn 10 bé, nên chọn sản phẩm kỹ lắm. Mê Cún Mèo không chỉ bán đồ organic chất lượng 
                         mà còn mang lại cảm giác tin cậy, như một người bạn cùng hành trình nuôi dưỡng.”
@@ -462,20 +622,20 @@
     <div class="container">
         <div class="d-flex justify-content-between align-items-center flex-wrap">
             <!-- Tiêu đề -->
-            <h2 class="fw-bold text-dark mb-0" style="font-size: 2.6rem; color: #563333;">
-                Các bài viết nổi nhất
+            <h2 class="fw-bold mb-0" style="font-size: 2.5rem; color: #563333;">
+                Các bài viết nổi bật
             </h2>
             <!-- Nút Đọc thêm -->
-            <a href="blog.html" class="btn btn-readmore mt-3 mt-md-0">
-                Đọc thêm
-            </a>
+            <a href="blog.html" class="text-decoration-none" style="color: #768862; font-weight: 600; font-family: 'Alata', sans-serif;">
+        Đọc thêm <i class="fa-solid fa-arrow-right ms-1"></i>
+    </a>
         </div>
     </div>
 </div>
 
 
 <!-- Blog Start -->
-<div class="blog-section py-5 bg-light">
+<div class="blog-section py-5">
     <div class="container">
         <div class="row g-4">
             <!-- Bài 1 -->
@@ -483,7 +643,7 @@
                 <a href="blog.html" class="text-decoration-none">
                     <div class="blog-card text-center">
                         <img src="img/trangchu-bv1.png" alt="Freeship HCM" class="img-fluid rounded mb-3">
-                        <h5 class="fw-bold text-success mb-2">Free Delivery</h5>
+                        <h5 class="fw-bold mb-1" style="color: #768862">Free Delivery</h5>
                         <p class="text-dark mb-1">
                             Chương trình ưu đãi – FREESHIP đơn hàng tại Tp.HCM
                         </p>
@@ -498,7 +658,7 @@
                 <a href="blog.html" class="text-decoration-none">
                     <div class="blog-card text-center">
                         <img src="img/trangchu-bv2.png" alt="Giveaway" class="img-fluid rounded mb-3">
-                        <h5 class="fw-bold text-success mb-2">GIVEAWAY</h5>
+                        <h5 class="fw-bold mb-1" style="color: #768862">Giveaway</h5>
                         <p class="text-dark mb-1">
                             Ưu đãi độc quyền dành cho khách hàng mới tại Mê Cún Mèo!
                         </p>
@@ -513,7 +673,7 @@
                 <a href="blog.html" class="text-decoration-none">
                     <div class="blog-card text-center">
                         <img src="img/trangchu-bv3.png" alt="Bật nắp Pate" class="img-fluid rounded mb-3">
-                        <h5 class="fw-bold text-success mb-2">GIVEAWAY</h5>
+                        <h5 class="fw-bold mb-1" style="color: #768862">Giveaway</h5>
                         <p class="text-dark mb-1">
                             Bật nắp Pate – Trúng quà thích mê!
                         </p>
@@ -528,7 +688,7 @@
                 <a href="blog.html" class="text-decoration-none">
                     <div class="blog-card text-center">
                         <img src="img/trangchu-bv4.jpg" alt="Đâu là thức ăn..." class="img-fluid rounded mb-3">
-                        <h5 class="fw-bold text-success mb-2">
+                        <h5 class="fw-bold mb-1" style="color: #768862">
                             Chăm Boss
                         </h5>
                         <p class="text-dark mb-1">
