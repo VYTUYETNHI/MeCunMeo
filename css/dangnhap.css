@@ -117,6 +117,11 @@ body::before {
     color: #777;
     font-style: italic;
 }
+.password-hint a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
 
 .terms-group {
     display: flex;
