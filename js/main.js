@@ -131,6 +131,36 @@
             '<i class="bi bi-arrow-right"></i>'
         ],
     });
-    
+
+
 })(jQuery);
 
+//search overlay
+
+    // 1. Mở tìm kiếm
+    function openSearch() {
+        const overlay = document.getElementById('full-search-overlay');
+        overlay.classList.add('open');
+        setTimeout(() => {
+            document.getElementById('main-search-input').focus();
+        }, 300);
+    }
+
+    // 2. Đóng tìm kiếm
+    function closeSearch() {
+        document.getElementById('full-search-overlay').classList.remove('open');
+    }
+
+    // 2. Hàm xử lý khi bấm phím ENTER 
+    function searchOnEnter(event) {
+        if (event.keyCode === 13 || event.key === 'Enter') {
+            var keyword = document.getElementById('main-search-input').value;
+            if (keyword.trim() !== "") {
+                // Chuyển sang trang timkiem.html kèm từ khóa
+                window.location.href = "timkiem.html?keyword=" + encodeURIComponent(keyword);
+            } else {
+                // Nếu chưa nhập thì chỉ chuyển trang thôi
+                window.location.href = "timkiem.html";
+            }
+        }
+    }

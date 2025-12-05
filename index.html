@@ -58,7 +58,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <a href="index.html" class="navbar-brand">
-         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">   
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
@@ -68,18 +68,104 @@
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-icons d-flex align-items-center">
-                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <!-- thêm position-relative -->
+                <div class="navbar-icons d-flex align-items-center position-relative">
+                <!-- Thêm câu này -->
+                <a href="javascript:void(0)" class="icon-link" onclick="openSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- Tới khúc này để hiện màn hình tìm kiếm -->
                 <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
                 <span class ="badge-cart">2</span>
                 </a>
                 <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-        </div>
                 </div>
             </div>
     </nav>
     <!-- Navbar End -->
 
+    <!-- search overlay start -->
+    <div id="full-search-overlay" class="search-overlay-container">
+        <div class="container py-4">
+            
+            <!-- Dòng nhập liệu -->
+            <div class="search-header d-flex align-items-center border-bottom pb-3 mb-4">
+                <i class="fa-solid fa-magnifying-glass fs-4 text-success me-3" style="color: #768862 !important;"></i>
+                <input type="text" id="main-search-input" 
+                    class="form-control border-0 fs-3 bg-transparent shadow-none" 
+                    placeholder="Tìm kiếm sản phẩm/bài viết..."  
+                    onkeydown="searchOnEnter(event)">
+                <button type="button" class="btn-close-overlay" onclick="closeSearch()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung gợi ý  -->
+            <div class="row">
+                <!-- Từ khóa phổ biến -->
+                <div class="col-lg-3 border-end">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Từ khóa phổ biến</h6>
+                    <ul class="list-unstyled search-links">
+                        <li><a href="chocun.html">Thức ăn hạt</a></li>
+                        <li><a href="chocun.html">Pate cho cún</a></li>
+                        <li><a href="chocun.html">Thức ăn cho cún lớn</a></li>
+                        <li><a href="chocun.html">Bánh thưởng</a></li>
+                        <li><a href="chocun.html">Nước hầm xương</a></li>
+                        <li><a href="chocun.html">Toppers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sản phẩm bán chạy -->
+                <div class="col-lg-9 ps-lg-5">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Sản phẩm bán chạy</h6>
+                    <div class="row g-4">
+                        
+                        <!-- SP 1 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp1.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">Natural Core</span>
+                                            <span class="search-title">Thức ăn ướt cho Cún - Vị Cá biển</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 2-->
+                            <div class="col-md-4">
+                                <a href="chitietsp-meo.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp3.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">VIVA RAW</span>
+                                            <span class="search-title">Thịt vịt cho Mèo</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 3 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp4.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">ACANA</span>
+                                            <span class="search-title">Pate cho Cún</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-backdrop" onclick="closeSearch()"></div>
+    </div>
+<!-- end search overlay-->
+ 
 <!-- Hero Start -->
 <div class="trangchu-hero d-flex align-items-center">
     <div class="container position-relative z-2"> <!-- z-2 để nổi lên trên nền sóng -->
@@ -702,6 +788,11 @@
     </div>
 </div>
 <!-- Blog Section End -->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
 
 
     <!-- Footer Start -->

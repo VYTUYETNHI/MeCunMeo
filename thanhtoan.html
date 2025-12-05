@@ -52,7 +52,7 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
+        <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 sticky-top">
             <!--Nút menu trên điện thoại-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -69,17 +69,103 @@
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-icons d-flex align-items-center">
-                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <!-- thêm position-relative -->
+                <div class="navbar-icons d-flex align-items-center position-relative">
+                <!-- Thêm câu này -->
+                <a href="javascript:void(0)" class="icon-link" onclick="openSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- Tới khúc này để hiện màn hình tìm kiếm -->
                 <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
                 <span class ="badge-cart">2</span>
                 </a>
                 <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-        </div>
                 </div>
             </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- search overlay start -->
+    <div id="full-search-overlay" class="search-overlay-container">
+        <div class="container py-4">
+            
+            <!-- Dòng nhập liệu -->
+            <div class="search-header d-flex align-items-center border-bottom pb-3 mb-4">
+                <i class="fa-solid fa-magnifying-glass fs-4 text-success me-3" style="color: #768862 !important;"></i>
+                <input type="text" id="main-search-input" 
+                    class="form-control border-0 fs-3 bg-transparent shadow-none" 
+                    placeholder="Tìm kiếm sản phẩm/bài viết..."  
+                    onkeydown="searchOnEnter(event)">
+                <button type="button" class="btn-close-overlay" onclick="closeSearch()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung gợi ý  -->
+            <div class="row">
+                <!-- Từ khóa phổ biến -->
+                <div class="col-lg-3 border-end">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Từ khóa phổ biến</h6>
+                    <ul class="list-unstyled search-links">
+                        <li><a href="chocun.html">Thức ăn hạt</a></li>
+                        <li><a href="chocun.html">Pate cho cún</a></li>
+                        <li><a href="chocun.html">Thức ăn cho cún lớn</a></li>
+                        <li><a href="chocun.html">Bánh thưởng</a></li>
+                        <li><a href="chocun.html">Nước hầm xương</a></li>
+                        <li><a href="chocun.html">Toppers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sản phẩm bán chạy -->
+                <div class="col-lg-9 ps-lg-5">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Sản phẩm bán chạy</h6>
+                    <div class="row g-4">
+                        
+                        <!-- SP 1 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp1.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">Natural Core</span>
+                                            <span class="search-title">Thức ăn ướt cho Cún - Vị Cá biển</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 2-->
+                            <div class="col-md-4">
+                                <a href="chitietsp-meo.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp3.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">VIVA RAW</span>
+                                            <span class="search-title">Thịt vịt cho Mèo</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 3 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp4.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">ACANA</span>
+                                            <span class="search-title">Pate cho Cún</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-backdrop" onclick="closeSearch()"></div>
+    </div>
+<!-- end search overlay-->
 
     <div class="container py-5">
     <!-- Tiêu đề trang -->
@@ -87,7 +173,7 @@
 
     <div class="row g-5">
         
-        <!-- CỘT TRÁI: THÔNG TIN GIAO HÀNG -->
+        <!-- Form điền Thông tin giao hàng -->
         <div class="col-lg-7">
             <h5 class="mb-3 fw-bold" style="color: #563333;">Thông tin người nhận</h5>
             
@@ -110,7 +196,7 @@
                         </div>
                     </div>
 
-                    <!-- Email (Tùy chọn) -->
+                    <!-- Email -->
                     <div class="col-md-6">
                         <div class="form-floating">
                             <input type="email" class="form-control" id="email" placeholder="Email">
@@ -120,16 +206,15 @@
 
                     <!-- Địa chỉ: Tỉnh/Thành -->
                     <div class="col-md-4">
-                        <div class="form-floating">
-                            <select class="form-select" id="city">
-                                <option value="" selected>Chọn Tỉnh/Thành</option>
-                                <option value="hcm">TP. Hồ Chí Minh</option>
-                                <option value="hn">Hà Nội</option>
-                                <option value="dn">Đà Nẵng</option>
-                            </select>
-                            <label for="city">Tỉnh / Thành phố</label>
-                        </div>
+                    <div class="form-floating">
+                        <select class="form-select" id="city">
+                    <option value="" selected>Chọn Tỉnh/Thành</option>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="hn">Hà Nội</option>
+                    </select>
+                    <label for="city">Tỉnh / Thành phố</label>
                     </div>
+                </div>
 
                     <!-- Địa chỉ: Quận/Huyện -->
                     <div class="col-md-4">
@@ -173,12 +258,12 @@
             </form>
         </div>
 
-        <!-- CỘT PHẢI: ĐƠN HÀNG & THANH TOÁN -->
+        <!-- Đơn hàng + Thanh toán -->
 <div class="col-lg-5">
     <div class="card border-0 shadow-sm rounded-3 bg-light">
         <div class="card-body p-4">
             
-            <!-- A. TIÊU ĐỀ + NÚT SỬA -->
+            <!-- Tiêu đề + nút sửa giỏ hàng -->
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5 class="mb-0 fw-bold" style="color: #563333;">Đơn hàng của bạn</h5>
                 <a href="giohang.html" class="text-decoration-none small fw-bold" style="color: #768862;">
@@ -186,7 +271,7 @@
                 </a>
             </div>
 
-            <!-- B. DANH SÁCH SẢN PHẨM (Đã sửa lỗi đóng thẻ) -->
+            <!-- danh sách sản phẩm -->
             <div class="order-summary">
                 
                 <!-- Sản phẩm 1 -->
@@ -223,7 +308,7 @@
 
             </div>
             <!-- Kết thúc danh sách sản phẩm -->
-            <!-- C. VOUCHER -->
+            <!-- ô áp voucher -->
             <div class="mb-3">
                 <label class="form-label fw-bold">Mã giảm giá</label>
                 <div class="input-group">
@@ -232,7 +317,7 @@
                 </div>
             </div>
 
-            <!-- D. VẬN CHUYỂN (Đã thêm class option-box để bo viền) -->
+            <!-- chọn phương thức vận chuyển -->
             <div class="mb-3">
                 <label class="form-label fw-bold">Vận chuyển</label>
                 <div class="option-box bg-white">
@@ -253,7 +338,7 @@
                 </div>
             </div>
 
-            <!-- E. TÍNH TIỀN -->
+            <!-- tính tổng -->
             <div class="d-flex justify-content-between mb-1">
                 <span class="text-muted">Tạm tính</span>
                 <span class="fw-bold">300.000 đ</span>
@@ -272,7 +357,7 @@
                 <span class="h5 fw-bold" id="final-total">330.000 đ</span>
             </div>
 
-            <!-- F. PHƯƠNG THỨC THANH TOÁN -->
+            <!-- chọn phương thức thanh toán -->
             <h5 class="mb-3 fw-bold" style="color: #563333;">Phương thức thanh toán</h5>
             
             <div class="payment-methods">
@@ -316,7 +401,7 @@
                 </div>
             </div>
 
-            <!-- G. NÚT ĐẶT HÀNG -->
+            <!-- nút đặt hàng -->
             <button class="btn btn-dark w-100 py-3 mt-4 fw-bold shadow btn-checkout-effect" style="background-color: #563333; border-radius: 50px;">
                 Đặt hàng ngay
             </button>
@@ -326,7 +411,61 @@
 </div>
     </div>
 </div>
+<!-- Modal quét mã qr -->
+<div class="modal fade" id="qrModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" style="color: #563333;">Thanh toán chuyển khoản</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-3">Vui lòng quét mã bên dưới để thanh toán:</p>
+                <!-- qr mẫu -->
+                <img src="https://api.vietqr.io/image/970415-113366668888-compact2.jpg?amount=330000&addInfo=MECUNMEO 12345&accountName=NGUYEN VAN A" 
+                     alt="QR Code" class="img-fluid mb-3 rounded-3 border" style="max-width: 250px;">
+                
+                <div class="alert alert-warning small text-start">
+                    <i class="fa-solid fa-triangle-exclamation me-1"></i>
+                    Lưu ý: Đơn hàng sẽ được giữ trong <strong>24 giờ</strong>. Vui lòng thanh toán sớm.
+                </div>
+                <p class="fw-bold" style="color: #563333;">Nội dung CK: <span class="text-danger">MECUNMEO 12345</span></p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-dark rounded-pill px-4" style="background: #563333;" onclick="finishOrder()">
+                    Đã chuyển khoản xong
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- modal đặt hàng thành công -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 text-center p-4">
+            <div class="modal-body">
+                <div class="mb-3">
+                    <i class="fa-solid fa-circle-check text-success" style="font-size: 60px;"></i>
+                </div>
+                <h4 class="fw-bold mb-2" style="color: #563333;">Đặt hàng thành công!</h4>
+                <p class="text-muted mb-4">Mã đơn hàng của bạn: <strong style="color: #768862;">#MCM123456</strong></p>
+                <p class="small">Cảm ơn bạn đã tin tưởng Mê Cún Mèo. Chúng tôi sẽ liên hệ sớm nhất để xác nhận đơn hàng.</p>
+                
+                <a href="index.html" class="btn btn-success rounded-pill px-5 mt-3 fw-bold" style="background: #768862; border: none;">
+                    Tiếp tục mua sắm
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Link đến JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/thanhtoan.js"></script>
+
+</body>
+</html>
     <!-- Footer Start -->
 <footer class="footer-section">
     <div class="container">

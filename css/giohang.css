@@ -1,53 +1,46 @@
-
-/*Giỏ hàng*/
-/* Màu chữ nâu thương hiệu */
 .text-brown {
     color: var(--title) !important;
     font-weight: 600;
 }
 
-/* Ẩn số hiển thị trong input number cho gọn */
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-/* Style cho bảng giỏ hàng */
 .table th {
     border-top: none;
     color: #666;
     font-weight: 600;
 }
-/* --- 1. BO VIỀN CHO KHUNG (BOX & CARD) --- */
+
 .cart-box, .card {
-    border-radius: 20px !important; /* Bo cong 20px (khá mềm mại) */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important; /* Đổ bóng nhẹ cho nổi */
-    border: none !important; /* Bỏ đường viền xám mặc định của Bootstrap */
-    overflow: hidden; /* Giúp các góc không bị nội dung bên trong che mất */
+    border-radius: 20px !important; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important; 
+    border: none !important;
+    overflow: hidden; 
 }
-/* Chọn tất cả ảnh nằm trong dòng sản phẩm giỏ hàng */
 .cart-item img {
-    width: 80px;       /* Chiều rộng cố định (bạn có thể chỉnh lên 100px nếu muốn to hơn) */
-    height: 80px;      /* Chiều cao cố định (bằng chiều rộng để thành hình vuông) */
-    object-fit: cover; /* QUAN TRỌNG: Giúp ảnh tự cắt để lấp đầy khung mà không bị méo/dẹt */
-    border-radius: 10px; /* Bo góc nhẹ cho đẹp (nếu thẻ img chưa có class rounded) */
-    border: 1px solid #eee; /* Viền mờ nhẹ để ảnh nổi bật trên nền trắng */
+    width: 80px;       
+    height: 80px;      
+    object-fit: cover; 
+    border-radius: 10px;
+    border: 1px solid #eee; 
 }
 
-/* --- 2. BO VIỀN CHO NÚT (BUTTON) --- */
+
 .btn {
-    border-radius: 50px !important; /* Bo tròn kiểu viên thuốc (Pill shape) */
-    padding-left: 25px !important; /* Tăng độ rộng nút cho đẹp */
+    border-radius: 50px !important; 
+    padding-left: 25px !important; 
     padding-right: 25px !important;
 }
 
-/* --- 3. BO VIỀN CHO Ô NHẬP LIỆU (INPUT) --- */
+
 .form-control {
     border-radius: 50px !important;
     padding-left: 20px;
 }
 
-/* --- 4. XỬ LÝ CHỖ NHẬP COUPON (Input dính liền Nút) --- */
-/* Vì input và nút dính nhau nên phải chỉnh riêng góc nối */
+
 .input-group .form-control {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
@@ -56,139 +49,125 @@ input[type=number]::-webkit-inner-spin-button {
 .input-group .btn {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
-    padding-left: 20px !important; /* Chỉnh lại padding cho cân */
+    padding-left: 20px !important; 
 }
-/* GHI ĐÈ class của Bootstrap */
+
 .btn-outline {
     color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
-/* Quan trọng: Phải chỉnh cả hiệu ứng khi di chuột (Hover) */
 .btn-outline:hover {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
-    color: white !important; /* Chữ chuyển thành trắng */
+    color: white !important; 
 }
-/* Áp dụng cho tiêu đề lớn, bảng sản phẩm và khung tổng tiền */
-.container h2,         /* Tiêu đề "Giỏ hàng của bạn" */
-.cart-box,              /* Bảng sản phẩm bên trái */
-.card,                  /* Khung tính tiền bên phải */
-.btn {                  /* Các nút bấm */
+
+.container h2,        
+.cart-box,           
+.card,               
+.btn {                 
     font-family: 'Alata', sans-serif !important;
 }
 
-/* Chỉnh thêm độ đậm cho các tiêu đề nhìn cho rõ */
 h2, h5, h6, .fw-bold {
-    font-weight: bold !important; /* Đậm hơn */
+    font-weight: bold !important; 
 }
 h5, h6, .h5, .h6 {
     font-family: 'Alata', sans-serif !important;
 }
-/* Checkbox to hơn một chút */
+
 .custom-checkbox {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    border: 2px solid #ccc; /* Viền xám khi chưa tích */
+    border: 2px solid #ccc; 
 }
 
-/* Khi tích vào thì đổi màu nền và viền thành màu Nâu */
 .custom-checkbox:checked {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
 }
 
-/* Hiệu ứng khi focus */
 .custom-checkbox:focus {
     box-shadow: 0 0 0 0.25rem rgba(86, 51, 51, 0.25);
 }
-/* --- 2. CỐ ĐỊNH CỘT & XUỐNG DÒNG --- */
+
 .cart-table {
-    table-layout: fixed; /* Bắt buộc bảng tuân theo kích thước % */
+    table-layout: fixed; 
     width: 100%;
 }
 
-/* Xử lý tên sản phẩm */
 .product-name-text h6 {
-    white-space: normal; /* Cho phép xuống dòng */
-    overflow-wrap: break-word; /* Cắt từ xuống dòng nếu quá dài */
+    white-space: normal; 
+    overflow-wrap: break-word; 
     line-height: 1.4;
     font-weight: 600;
 }
 
-/* 2. CĂN CHỈNH ICON THÙNG RÁC */
 .cart-table td:last-child {
-    text-align: center; /* Căn giữa theo chiều ngang */
-    vertical-align: middle; /* Căn giữa theo chiều dọc */
+    text-align: center; 
+    vertical-align: middle;
 }
 
 .cart-table .fa-trash {
-    display: inline-flex; /* Giúp icon căn chỉnh chuẩn hơn */
+    display: inline-flex; 
     justify-content: center;
     align-items: center;
     width: 35px;
     height: 35px;
-    border-radius: 50%; /* Tạo vùng bấm hình tròn */
+    border-radius: 50%; 
     transition: all 0.2s;
 }
 
-/* Hiệu ứng khi rê chuột vào thùng rác (Tạo cảm giác xịn) */
 .cart-table .fa-trash:hover {
-    background-color: #f8d7da; /* Nền đỏ nhạt */
-    color: #dc3545; /* Icon đỏ đậm */
-    transform: scale(1.1); /* Phóng to nhẹ */
+    background-color: #f8d7da; 
+    color: #dc3545;
+    transform: scale(1.1); 
 }
-/* --- PRODUCT CARD STYLE --- */
 
-/* 1. Khung sản phẩm */
 .product-card {
-    border-radius: 15px !important; /* Bo góc mềm mại */
+    border-radius: 15px !important; 
     transition: all 0.3s ease;
-    overflow: hidden; /* Để ảnh không bị lòi ra ngoài góc bo */
+    overflow: hidden; 
 }
 
-/* Hiệu ứng khi di chuột vào khung: Nổi lên + Bóng đổ */
+
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-/* 2. Ảnh sản phẩm */
+
 .product-card img {
     width: 100%;
-    aspect-ratio: 1/1; /* Ép ảnh luôn hình vuông (cho đều) */
+    aspect-ratio: 1/1; 
     object-fit: cover;
     transition: 0.5s ease;
 }
 
-/* Zoom nhẹ ảnh khi hover */
 .product-card:hover img {
     transform: scale(1.05);
 }
 
-/* 3. Tên sản phẩm */
 .product-card .card-title {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
-    
-    /* Cắt chữ nếu quá dài (tối đa 2 dòng) */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    height: 40px; /* Chiều cao cố định để các card bằng nhau */
+    height: 40px;
 }
 
 .product-card .card-title a:hover {
-    color: #768862 !important; /* Đổi màu xanh khi hover tên */
+    color: #768862 !important; 
 }
 
-/* 4. Nút hành động (Cart/View) - Ban đầu ẩn đi */
 .product-action {
     position: absolute;
-    bottom: -50px; /* Giấu ở dưới đáy ảnh */
+    bottom: -50px;
     left: 0;
     right: 0;
     display: flex;
@@ -197,12 +176,12 @@ h5, h6, .h5, .h6 {
     transition: 0.3s ease;
 }
 
-/* Khi hover vào card thì nút trồi lên */
+
 .product-card:hover .product-action {
     bottom: 20px;
 }
 
-/* Style cho từng nút tròn */
+
 .btn-action {
     width: 40px;
     height: 40px;
@@ -218,6 +197,6 @@ h5, h6, .h5, .h6 {
 }
 
 .btn-action:hover {
-    background: #768862; /* Màu xanh thương hiệu */
+    background: #768862; 
     color: white;
 }

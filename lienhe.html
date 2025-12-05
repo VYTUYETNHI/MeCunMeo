@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Mê Cún Mèo - Thức ăn Organic cho thú cưng</title>
+    <title>Liên hệ - Mê Cún Mèo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -63,14 +63,14 @@
 
 
 
-    <!-- Navbar Start -->
+        <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 sticky-top">
             <!--Nút menu trên điện thoại-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <a href="index.html" class="navbar-brand">
-         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">   
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
@@ -80,17 +80,103 @@
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-icons d-flex align-items-center">
-                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <!-- thêm position-relative -->
+                <div class="navbar-icons d-flex align-items-center position-relative">
+                <!-- Thêm câu này -->
+                <a href="javascript:void(0)" class="icon-link" onclick="openSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- Tới khúc này để hiện màn hình tìm kiếm -->
                 <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
                 <span class ="badge-cart">2</span>
                 </a>
                 <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-        </div>
                 </div>
             </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- search overlay start -->
+    <div id="full-search-overlay" class="search-overlay-container">
+        <div class="container py-4">
+            
+            <!-- Dòng nhập liệu -->
+            <div class="search-header d-flex align-items-center border-bottom pb-3 mb-4">
+                <i class="fa-solid fa-magnifying-glass fs-4 text-success me-3" style="color: #768862 !important;"></i>
+                <input type="text" id="main-search-input" 
+                    class="form-control border-0 fs-3 bg-transparent shadow-none" 
+                    placeholder="Tìm kiếm sản phẩm/bài viết..."  
+                    onkeydown="searchOnEnter(event)">
+                <button type="button" class="btn-close-overlay" onclick="closeSearch()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung gợi ý  -->
+            <div class="row">
+                <!-- Từ khóa phổ biến -->
+                <div class="col-lg-3 border-end">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Từ khóa phổ biến</h6>
+                    <ul class="list-unstyled search-links">
+                        <li><a href="chocun.html">Thức ăn hạt</a></li>
+                        <li><a href="chocun.html">Pate cho cún</a></li>
+                        <li><a href="chocun.html">Thức ăn cho cún lớn</a></li>
+                        <li><a href="chocun.html">Bánh thưởng</a></li>
+                        <li><a href="chocun.html">Nước hầm xương</a></li>
+                        <li><a href="chocun.html">Toppers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sản phẩm bán chạy -->
+                <div class="col-lg-9 ps-lg-5">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Sản phẩm bán chạy</h6>
+                    <div class="row g-4">
+                        
+                        <!-- SP 1 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp1.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">Natural Core</span>
+                                            <span class="search-title">Thức ăn ướt cho Cún - Vị Cá biển</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 2-->
+                            <div class="col-md-4">
+                                <a href="chitietsp-meo.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp3.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">VIVA RAW</span>
+                                            <span class="search-title">Thịt vịt cho Mèo</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 3 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp4.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">ACANA</span>
+                                            <span class="search-title">Pate cho Cún</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-backdrop" onclick="closeSearch()"></div>
+    </div>
+<!-- end search overlay-->
 
 
 
@@ -134,48 +220,73 @@
 
 
 <!-- FORM LIÊN HỆ -->
-        <div class="col-lg-7">
-            <form action="#" method="POST">
-                <div class="row g-3">
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Họ và Tên *" required>
+    <div class="col-lg-7">
+        <form id="contactForm" novalidate>
+            <div class="row g-3">
+                <div class="col-12">
+                    <input type="text" class="form-control" id="fullName" placeholder="Họ và Tên *" required>
+                    <div class="invalid-feedback">Vui lòng nhập họ và tên (tối thiểu 2 ký tự).</div>
+                </div>
+                <div class="col-12">
+                    <input type="email" class="form-control" id="email" placeholder="Email *" required>
+                    <div class="invalid-feedback">Vui lòng nhập email hợp lệ.</div>
+                </div>
+                <div class="col-12">
+                    <input type="text" class="form-control" id="subject" placeholder="Lý do liên hệ *" required>
+                    <div class="invalid-feedback">Vui lòng nhập lý do liên hệ.</div>
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" id="message" rows="5" placeholder="Nội dung hỗ trợ *" required></textarea>
+                    <div class="invalid-feedback">Nội dung phải từ 20 đến 1000 ký tự.</div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100 py-2">Gửi</button>
+                </div>
+                <div class="col-12">
+                    <div class="alert alert-success mt-3 d-none" id="successMessage">
+                        Cảm ơn bạn! Tin nhắn đã được gửi thành công. Chúng tôi sẽ phản hồi trong vòng 24h.
                     </div>
-                    <div class="col-12">
-                        <input type="email" class="form-control" placeholder="Email *" required>
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control" placeholder="Lý do liên hệ *" required>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control" rows="5" placeholder="Nội dung hỗ trợ *" required></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary w-100 py-2">Gửi</button>
+                    <div class="alert alert-danger mt-3 d-none" id="errorMessage">
+                        Có lỗi xảy ra. Vui lòng kiểm tra lại các trường thông tin.
                     </div>
                 </div>
-            </form>
-        </div>
-<!-- NHẬN TIN & ƯU ĐÃI -->
-<div class="col-lg-5">
-    <div class="newsletter-box">
-        <h4 class="fw-bold mb-3">Nhận tin và ưu đãi</h4>
-        <p class="mb-4">
-           Đăng ký để nhận những câu chuyện nhỏ, bí kíp chăm thú cưng và ưu đãi thuần khiết từ Mê Cún Mèo.
-
-
-        </p>
-        
-        <!-- Form dọc: email ở trên, nút Xác nhận ở dưới -->
-        <form class="text-center">
-            <input type="email" class="form-control mx-auto mb-3" placeholder="Nhập email..." required>
-            <button type="submit" class="btn btn-success w-100" style="max-width: 260px;">Xác nhận</button>
+            </div>
         </form>
-        
-       <img src="img/lienhe-nhantinvauudai.png" alt="Nhận ưu đãi" class="nhan-uu-dai-img">
-
     </div>
-</div>
+<!-- NHẬN TIN & ƯU ĐÃI - CÓ VALIDATION REAL-TIME -->
+    <div class="col-lg-5">
+        <div class="newsletter-box">
+            <h4 class="fw-bold mb-3">Nhận tin và ưu đãi</h4>
+            <p class="mb-4">
+                Đăng ký để nhận những câu chuyện nhỏ, bí kíp chăm thú cưng và ưu đãi thuần khiết từ Mê Cún Mèo.
+            </p>
+            <form id="newsletterForm" class="text-center" novalidate onsubmit="return false;">
+                <div class="position-relative mb-3">
+                    <input 
+                        type="email" 
+                        class="form-control mx-auto" 
+                        id="newsletterEmail" 
+                        placeholder="Nhập email..." 
+                        style="max-width: 300px; height: 50px;"
+                        autocomplete="off"
+                        required>
+                    <div class="invalid-feedback text-start ms-3">
+                        Vui lòng nhập email hợp lệ (ví dụ: abc@gmail.com)
+                    </div>
+                </div>
 
+                <button type="submit" class="btn btn-success w-100" style="max-width: 260px; height: 50px; font-size: 1.1rem;">
+                    Xác nhận
+                </button>
+
+                <div class="alert alert-success mt-3 d-none" id="newsletterSuccess">
+                    Tuyệt vời! Bạn đã đăng ký thành công. Ưu đãi sẽ được gửi về email ngay nhé!
+                </div>
+            </form>
+
+            <img src="img/lienhe-nhantinvauudai.png" alt="Nhận ưu đãi" class="nhan-uu-dai-img mt-4">
+        </div>
+    </div>
     </div>
 
     <div style="margin: 160px 0;"></div>
@@ -243,13 +354,12 @@
         </div>
     </div>
 </div>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/lienhe.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
-
-
-
 
 
     <!-- Footer Start -->

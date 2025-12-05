@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title>Trang Blog - Mê Cún Mèo</title>
+    <title>Blog - Mê Cún Mèo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alata:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
 
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
+
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/blog.css" rel="stylesheet">
 </head>
+
+
 
 
 <body>
@@ -52,9 +61,6 @@
 </div>
     <!-- Topbar End -->
 
-
-
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 sticky-top">
             <!--Nút menu trên điện thoại-->
@@ -62,7 +68,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <a href="index.html" class="navbar-brand">
-         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">   
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
@@ -72,17 +78,104 @@
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-icons d-flex align-items-center">
-                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <!-- thêm position-relative -->
+                <div class="navbar-icons d-flex align-items-center position-relative">
+                <!-- Thêm câu này -->
+                <a href="javascript:void(0)" class="icon-link" onclick="openSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- Tới khúc này để hiện màn hình tìm kiếm -->
                 <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
                 <span class ="badge-cart">2</span>
                 </a>
                 <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-        </div>
                 </div>
             </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- search overlay start -->
+    <div id="full-search-overlay" class="search-overlay-container">
+        <div class="container py-4">
+            
+            <!-- Dòng nhập liệu -->
+            <div class="search-header d-flex align-items-center border-bottom pb-3 mb-4">
+                <i class="fa-solid fa-magnifying-glass fs-4 text-success me-3" style="color: #768862 !important;"></i>
+                <input type="text" id="main-search-input" 
+                    class="form-control border-0 fs-3 bg-transparent shadow-none" 
+                    placeholder="Tìm kiếm sản phẩm/bài viết..."  
+                    onkeydown="searchOnEnter(event)">
+                <button type="button" class="btn-close-overlay" onclick="closeSearch()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung gợi ý  -->
+            <div class="row">
+                <!-- Từ khóa phổ biến -->
+                <div class="col-lg-3 border-end">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Từ khóa phổ biến</h6>
+                    <ul class="list-unstyled search-links">
+                        <li><a href="chocun.html">Thức ăn hạt</a></li>
+                        <li><a href="chocun.html">Pate cho cún</a></li>
+                        <li><a href="chocun.html">Thức ăn cho cún lớn</a></li>
+                        <li><a href="chocun.html">Bánh thưởng</a></li>
+                        <li><a href="chocun.html">Nước hầm xương</a></li>
+                        <li><a href="chocun.html">Toppers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sản phẩm bán chạy -->
+                <div class="col-lg-9 ps-lg-5">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Sản phẩm bán chạy</h6>
+                    <div class="row g-4">
+                        
+                        <!-- SP 1 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp1.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">Natural Core</span>
+                                            <span class="search-title">Thức ăn ướt cho Cún - Vị Cá biển</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 2-->
+                            <div class="col-md-4">
+                                <a href="chitietsp-meo.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp3.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">VIVA RAW</span>
+                                            <span class="search-title">Thịt vịt cho Mèo</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 3 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp4.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">ACANA</span>
+                                            <span class="search-title">Pate cho Cún</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-backdrop" onclick="closeSearch()"></div>
+    </div>
+<!-- end search overlay-->
+
 
 
 <!-- Blog Hero Banner -->
@@ -105,12 +198,17 @@
 </section>
 
 
+
+
 <body>
 
-    <!-- ==================== BLOG CONTENT (đã bỏ header) ==================== -->
+
+    <!-- ==================== BLOG CONTENT ==================== -->
     <div class="container py-5">
 
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-5">
+
 
             <!-- Bài 1 -->
           <div class="col">
@@ -129,6 +227,7 @@
     </a>
 </div>
 
+
             <!-- Bài 2 -->
             <div class="col">
                 <a href="#" class="text-decoration-none">
@@ -141,6 +240,7 @@
                     </div>
                 </a>
             </div>
+
 
             <!-- Bài 3 -->
             <div class="col">
@@ -155,6 +255,7 @@
                 </a>
             </div>
 
+
             <!-- Bài 4 -->
             <div class="col">
                 <a href="#" class="text-decoration-none">
@@ -167,6 +268,7 @@
                     </div>
                 </a>
             </div>
+
 
             <!-- Bài 5 -->
             <div class="col">
@@ -181,6 +283,7 @@
                 </a>
             </div>
 
+
             <!-- Bài 6 -->
             <div class="col">
                 <a href="#" class="text-decoration-none">
@@ -193,6 +296,7 @@
                     </div>
                 </a>
             </div>
+
 
             <!-- Bài 7 -->
             <div class="col">
@@ -207,6 +311,7 @@
                 </a>
             </div>
 
+
             <!-- Bài 8 -->
             <div class="col">
                 <a href="#" class="text-decoration-none">
@@ -219,8 +324,66 @@
                     </div>
                 </a>
             </div>
+<!-- Bài 9 -->
+<div class="col page-2 d-none">
+    <a href="/chitietblog9.html" class="text-decoration-none">
+        <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden">
+            <img src="img/blog-5 mẹo chăm sóc chó mùa lạnh.png" class="card-img-top" alt="Tips chăm sóc chó">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-dark fw-bold">5 mẹo chăm sóc chó mùa lạnh</h5>
+                <p class="text-primary mt-auto"><i class="bi bi-calendar3 me-2"></i>25/11/2025</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<!-- Bài 10 -->
+<div class="col page-2 d-none">
+    <a href="/chitietblog10.html" class="text-decoration-none">
+        <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden">
+            <img src="img/blog-Chăm sóc mèo lười ăn – giải pháp hiệu quả.png" class="card-img-top" alt="Tips chăm sóc mèo">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-dark fw-bold">Chăm sóc mèo lười ăn – giải pháp hiệu quả</h5>
+                <p class="text-primary mt-auto"><i class="bi bi-calendar3 me-2"></i>26/11/2025</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<!-- Bài 11 -->
+<div class="col page-2 d-none">
+    <a href="/chitietblog11.html" class="text-decoration-none">
+        <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden">
+            <img src="img/blog-Top 5 thức ăn dinh dưỡng cho chó lớn tuổi.png" class="card-img-top" alt="Thức ăn dinh dưỡng">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-dark fw-bold">Top 5 thức ăn dinh dưỡng cho chó lớn tuổi</h5>
+                <p class="text-primary mt-auto"><i class="bi bi-calendar3 me-2"></i>27/11/2025</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<!-- Bài 12 -->
+<div class="col page-2 d-none">
+    <a href="/chitietblog12.html" class="text-decoration-none">
+        <div class="card blog-card border-0 shadow-sm h-100 overflow-hidden">
+            <img src="img/blog-Lịch tiêm vaccine cần biết cho chó và mèo.png" class="card-img-top" alt="Vaccine cho thú cưng">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-dark fw-bold">Lịch tiêm vaccine cần biết cho chó và mèo</h5>
+                <p class="text-primary mt-auto"><i class="bi bi-calendar3 me-2"></i>28/11/2025</p>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+
 
         </div>
+
 
         <!-- Phân trang -->
         <div class="blog-custom-pagination d-flex align-items-center mt-5 position-relative">
@@ -231,22 +394,20 @@
                 <!-- Thêm trang khác ở đây nếu cần -->
             </div>
 
+
             <!-- Nút TIẾP THEO bên phải -->
             <a href="#" class="btn-next ms-auto">
                 TIẾP THEO <i class="bi bi-chevron-right ms-1"></i>
             </a>
         </div>
 
-    </div>
-    <!-- ==================== HẾT PHẦN BLOG CONTENT ==================== -->
 
-    <!-- Bootstrap JS -->
+    </div>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>
-
-
-
 
 
 <!-- Footer Start -->
@@ -266,6 +427,8 @@
             </div>
 
 
+
+
             <!-- CỘT 2: LIÊN HỆ -->
             <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="footer-title">Liên hệ</h4>
@@ -276,6 +439,8 @@
                     <li>Giờ làm việc: 08h00 - 22h00</li>
                 </ul>
             </div>
+
+
 
 
             <!-- CỘT 3: CHÍNH SÁCH -->
@@ -292,8 +457,12 @@
     </div>
 
 
+
+
         <!-- DÒNG KẺ NGANG -->
         <hr class="footer-divider">
+
+
 
 
         <!-- PHẦN DƯỚI: MẠNG XÃ HỘI & COPYRIGHT -->
@@ -314,6 +483,15 @@
     </div>
 </footer>
    
+
+
+
+
+
+
+
+
+
 
 
 

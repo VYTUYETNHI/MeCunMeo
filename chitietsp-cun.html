@@ -62,7 +62,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         <a href="index.html" class="navbar-brand">
-         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">  
+         <img src="img/logo.png" alt="Mê Cún Mèo" class="img-fluid">   
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
@@ -72,17 +72,103 @@
                 <a href="lienhe.html" class="nav-item nav-link">Liên hệ</a>
                 <a href="blog.html" class="nav-item nav-link">Blog</a>
                 </div>
-                <div class="navbar-icons d-flex align-items-center">
-                <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <!-- thêm position-relative -->
+                <div class="navbar-icons d-flex align-items-center position-relative">
+                <!-- Thêm câu này -->
+                <a href="javascript:void(0)" class="icon-link" onclick="openSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <!-- Tới khúc này để hiện màn hình tìm kiếm -->
                 <a href="giohang.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i>
                 <span class ="badge-cart">2</span>
                 </a>
                 <a href="taikhoan.html" class="icon-link"><i class="fa-solid fa-user"></i></a>
-        </div>
                 </div>
             </div>
     </nav>
     <!-- Navbar End -->
+
+    <!-- search overlay start -->
+    <div id="full-search-overlay" class="search-overlay-container">
+        <div class="container py-4">
+            
+            <!-- Dòng nhập liệu -->
+            <div class="search-header d-flex align-items-center border-bottom pb-3 mb-4">
+                <i class="fa-solid fa-magnifying-glass fs-4 text-success me-3" style="color: #768862 !important;"></i>
+                <input type="text" id="main-search-input" 
+                    class="form-control border-0 fs-3 bg-transparent shadow-none" 
+                    placeholder="Tìm kiếm sản phẩm/bài viết..."  
+                    onkeydown="searchOnEnter(event)">
+                <button type="button" class="btn-close-overlay" onclick="closeSearch()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Nội dung gợi ý  -->
+            <div class="row">
+                <!-- Từ khóa phổ biến -->
+                <div class="col-lg-3 border-end">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Từ khóa phổ biến</h6>
+                    <ul class="list-unstyled search-links">
+                        <li><a href="chocun.html">Thức ăn hạt</a></li>
+                        <li><a href="chocun.html">Pate cho cún</a></li>
+                        <li><a href="chocun.html">Thức ăn cho cún lớn</a></li>
+                        <li><a href="chocun.html">Bánh thưởng</a></li>
+                        <li><a href="chocun.html">Nước hầm xương</a></li>
+                        <li><a href="chocun.html">Toppers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sản phẩm bán chạy -->
+                <div class="col-lg-9 ps-lg-5">
+                    <h6 class="fw-bold mb-3" style="letter-spacing: 1px; color: #563333;">Sản phẩm bán chạy</h6>
+                    <div class="row g-4">
+                        
+                        <!-- SP 1 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp1.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">Natural Core</span>
+                                            <span class="search-title">Thức ăn ướt cho Cún - Vị Cá biển</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 2-->
+                            <div class="col-md-4">
+                                <a href="chitietsp-meo.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp3.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">VIVA RAW</span>
+                                            <span class="search-title">Thịt vịt cho Mèo</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- SP 3 -->
+                            <div class="col-md-4">
+                                <a href="chitietsp-cun.html" class="text-decoration-none">
+                                    <div class="search-product-card position-relative">
+                                        <img src="img/giohang-sp4.png" class="img-fluid">
+                                        <div class="mt-2">
+                                            <span class="search-brand">ACANA</span>
+                                            <span class="search-title">Pate cho Cún</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-backdrop" onclick="closeSearch()"></div>
+    </div>
+<!-- end search overlay-->
 
 <!-- 1. BREADCRUMBS -->
 <div class="container py-3 mt-2">
@@ -90,14 +176,14 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Trang chủ</a></li>
             <li class="breadcrumb-item"><a href="chocun.html" class="text-decoration-none text-muted">Cho Cún</a></li>
-            <li class="breadcrumb-item active fw-bold" style="color: #768862;" aria-current="page">Thức ăn khô</li>
+            <li class="breadcrumb-item active fw-bold" style="color: #768862;" aria-current="page">Snack cho cún vị Thịt gà phô mai 180g (4 gói)</li>
         </ol>
     </nav>
 </div>
 
 <!-- 2. CHI TIẾT SẢN PHẨM (HERO SECTION) -->
 <div class="container pb-5">
-    <div class="row g-5">
+    <div class="row g-5" data-product-id="chocun-sp1">
         
         <!-- CỘT TRÁI: ẢNH SẢN PHẨM -->
         <div class="col-lg-5">
@@ -129,34 +215,35 @@
                 <div class="star-rating me-2" style="color: #ffc107;">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <span class="text-muted small border-start ps-2 border-dark">(125 đánh giá)</span>
+                <span class="text-muted small border-start ps-2 border-dark">(3 đánh giá)</span>
             </div>
+
 
             <!-- Giá tiền -->
-            <div class="d-flex align-items-end gap-3 mb-4">
-                <span class="h2 fw-bold mb-0" style="color: #768862;">180.000đ</span>
-                <del class="text-muted fs-5">200.000đ</del>
-            </div>
+<div class="d-flex align-items-end gap-3 mb-4">
+    <span id="product-price" class="h2 fw-bold mb-0" style="color: #768862;">180.000đ</span>
+    <del id="original-price" class="text-muted fs-5">200.000đ</del>
+</div>
 
-            <!-- Mô tả ngắn -->
-            <div class="alert alert-light border-0 rounded-3 mb-4" style="background-color: #f9f9f9;">
-                <p class="mb-0 text-secondary">
-                    <i class="fa-solid fa-check-circle me-2 text-success"></i>
-                    Đạt chứng nhận SGS - Không chứa kim loại nặng, thuốc trừ sâu hoặc các chất độc hại.
-                </p>
-            </div>
+<!-- Mô tả ngắn -->
+<div class="alert alert-light border-0 rounded-3 mb-4" style="background-color: #f9f9f9;">
+    <p class="mb-0 text-secondary">
+        <i class="fa-solid fa-check-circle me-2 text-success"></i>
+        Đạt chứng nhận SGS - Không chứa kim loại nặng, thuốc trừ sâu hoặc các chất độc hại.
+    </p>
+</div>
 
-            <!-- Phân loại -->
-            <div class="mb-4">
-                <label class="fw-bold mb-2" style="color: #563333;">Phân loại:</label>
-                <div class="d-flex gap-2">
-                    <input type="radio" class="btn-check" name="options" id="opt1" autocomplete="off" checked>
-                    <label class="btn btn-outline-brown" for="opt1">Gói 180g</label>
+<!-- Phân loại -->
+<div class="mb-4">
+    <label class="fw-bold mb-2" style="color: #563333;">Phân loại:</label>
+    <div class="d-flex gap-2">
+        <input type="radio" class="btn-check" name="options" id="opt1" autocomplete="off" checked>
+        <label class="btn btn-outline-brown" for="opt1" data-price="100.000" data-original="120.000">Gói 180g</label>
 
-                    <input type="radio" class="btn-check" name="options" id="opt2" autocomplete="off">
-                    <label class="btn btn-outline-brown" for="opt2">Gói 300g</label>
-                </div>
-            </div>
+        <input type="radio" class="btn-check" name="options" id="opt2" autocomplete="off">
+        <label class="btn btn-outline-brown" for="opt2" data-price="150.000" data-original="180.000">Gói 300g</label>
+    </div>
+</div>
 
             <!-- Số lượng & Nút bấm -->
             <div class="d-flex align-items-center flex-wrap gap-3 mb-4">
@@ -284,7 +371,7 @@
     </div>
 </div>
 
-<!-- 5. GỢI Ý SẢN PHẨM (Code bạn cung cấp) -->
+<!-- 5. GỢI Ý SẢN PHẨM -->
 <section class="featured-products py-5 mt-5 bg-white border-top">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -311,6 +398,45 @@
     </div>
 </section>
 
+<p class="float-right">
+                <a href="#">&#8896;</a>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Custom script -->
+    <script src="js/main.js"></script>
+    <script src="js/chocun.js"></script>
+    <script src="js/chitietsp.js"></script>
+    <script>
+    const options = document.querySelectorAll('input[name="options"]');
+    
+    // Hàm cập nhật giá dựa trên lựa chọn
+    function updatePrice() {
+        // Tìm radio đang checked
+        const selectedOption = document.querySelector('input[name="options"]:checked');
+        if (selectedOption) {
+            // Lấy label tương ứng với radio checked
+            const label = document.querySelector(`label[for="${selectedOption.id}"]`);
+            const price = label.getAttribute('data-price');
+            const original = label.getAttribute('data-original');
+            
+            // Cập nhật giá hiển thị
+            document.getElementById('product-price').textContent = price + 'đ';
+            document.getElementById('original-price').textContent = original + 'đ';
+        }
+    }
+    
+    // Gọi hàm ngay lúc đầu để hiển thị giá mặc định
+    updatePrice();
+    
+    // Lắng nghe sự kiện change trên mỗi radio
+    options.forEach(option => {
+        option.addEventListener('change', updatePrice);
+    });
+</script>
+</body>
+</html>
+
             <!-- Footer Start -->
 <footer class="footer-section">
     <div class="container">
@@ -318,7 +444,6 @@
             <!-- CỘT 1: THÔNG TIN THƯƠNG HIỆU -->
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="footer-logo mb-3">
-                    <!-- Thay ảnh logo của bạn vào đây -->
                     <img src="img/logo-tron.png" alt="Mê Cún Mèo" style="background: white; border-radius: 50%; height: 100px; width: 100px; object-fit: contain;">
                 </div>
                 <h3 class="footer-heading">Từ yêu thương, tạo nên Mê Cún Mèo</h3>
@@ -376,19 +501,4 @@
     </div>
 </footer>
     <!-- Footer End -->
-     <p class="float-right">
-                <a href="#">&#8896;</a>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/popperjs/popper.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom script - Các file js do mình tự viết -->
-    <script src="../assets/js/app.js"></script>
-
-</body>
-</html>
+     
