@@ -1,0 +1,114 @@
+﻿
+
+BẢNG PHÂN CÔNG 
+------------------------------------------------------------
+### 📝 GHI CHÚ CHUNG
+1. **Frontend:** Copy CSS/JS vào thư mục `wwwroot`.
+2. **Layout chung:** Dùng chung `Views/Shared/_Layout.cshtml`. 
+-> hạn chế sửa file này -> nếu sửa phải báo trước cho nhóm.
+3. **Database:** Chú ý sửa Models phải báo trước cho nhóm, không tạo Migrations chỉ chạy lệnh update database.  
+
+**Deadline:** Hoàn thành trong ngày 20/12.
+
+------------------------------------------------------------ 
+MỤC 1: Vi 
+**Yêu cầu: ADMIN - Quản lý Danh mục Sản phẩm:
+- Xem/Liệt kê Sản phẩm: Hiển thị danh sách, phân trang, tìm kiếm, lọc (theo danh mục, giá...).
+- Thêm/Sửa Sản phẩm: Quản lý thông tin chi tiết (Tên, Mô tả, Giá, Số lượng tồn kho, Danh mục, Ảnh, Trạng thái...).
+- Xóa Sản phẩm: Xóa hoặc vô hiệu hóa sản phẩm (disable/hide).
+- Code cho khi nhập trên thanh localhost/admin để đăng nhập quản trị -> vào trang quản lý: sản phẩm, danh mục, đơn hàng.
+  + Sau đó code cho các trang quản lý sản phẩm, danh mục (CRUD).
+  + Link mục quản lý đơn hàng để Dung làm tiếp, chỉ cần viết code cho nó điều hướng sang trang quản lý đơn hàng. 
+
+**Flow:
+1. Đăng nhập Admin: localhost/admin -> Trang Quản lý
+2. Quản lý Danh mục: localhost/admin/category -> CRUD Danh mục
+3. Quản lý Sản phẩm: localhost/admin/product -> CRUD Sản phẩm, upload ảnh
+4. Quản lý Đơn hàng: localhost/admin/order -> Dung làm tiếp phần đơn hàng
+
+**Các file cần làm:
+- Areas/Admin/Controllers/CategoryController.cs
+- Areas/Admin/Controllers/ProductController.cs
+- Toàn bộ Views trong: Areas/Admin/Views/Category/ & Product/
+- Models/Product.cs & Category.cs -> này là các file database, nếu sửa phải báo trước. 
+
+----------------------------
+MỤC 2: Vy
+**Yêu cầu:
+- Đăng ký Tài khoản: Lưu trữ thông tin cơ bản (Tên, Email, Mật khẩu, Số điện thoại, địa chỉ giao hàng...). Xác thực Email (Không bắt buộc).
+- Đăng nhập/Đăng xuất tài khoản.
+- Quản lý Tài khoản (Khách hàng): Cập nhật thông tin cá nhân, đổi mật khẩu. -> Thêm 1 mục Đổi mật khẩu.
+- Trong trang tài khoản có mục Đơn mua, link sang để Dung làm tiếp phần đơn hàng.
+- Đảm bảo chức năng đăng nhập, đăng ký, và quản lý thông tin cá nhân người dùng hoạt động đầy đủ.
+- Chuyển giao diện đăng nhập, đăng ký từ HTML sang. 
+
+**Flow:
+1. Đăng ký tài khoản: `Views/Account/Register.cshtml`
+2. Đăng nhập tài khoản: `Views/Account/Login.cshtml`
+3. Quản lý tài khoản: `Views/Account/Profile.cshtml` (Cập nhật thông tin, đổi mật khẩu)
+
+**Các file cần làm:
+- Controllers/AccountController.cs
+- Views/Account/ (Login, Register, Profile)
+- ViewModels/ (LoginVM, RegisterVM, ProfileVM)
+
+----------------------------
+MỤC 3: Châu
+**Yêu cầu:
+- Trang Sản phẩm: Hiển thị chi tiết sản phẩm, nhiều ảnh, thông tin liên quan (Danh mục, mô tả).
+- Thêm vào Giỏ hàng: Cho phép khách hàng đã đăng nhập thêm sản phẩm vào giỏ hàng.
+- Quản lý Giỏ hàng: Xem, cập nhật số lượng, xóa sản phẩm khỏi giỏ hàng.
+- Đảm bảo chức năng hiển thị sản phẩm, bộ lọc tìm kiếm, giỏ hàng hoạt động đầy đủ. 
+- Chuyển giao diện trang chủ, trang sản phẩm từ HTML sang.
+
+**Flow:
+1. Trang chủ và Tin tức: `Controllers/HomeController.cs`
+2. Trang danh sách sản phẩm: `Controllers/ProductController.cs` - Mục Index
+3. Trang chi tiết sản phẩm: `Controllers/ProductController.cs` - Mục Detail
+4. Giỏ hàng: `Controllers/CartController.cs`
+
+**Các file cần làm:
+- Controllers/HomeController.cs
+- Controllers/ProductController.cs (Action Index, Detail)
+- Controllers/CartController.cs
+- Views/Product/ (Index, Details)
+- Views/Cart/Index.cshtml
+- Shared: Views/Shared/_ProductCard.cshtml (Thẻ sản phẩm dùng chung).
+
+----------------------------
+MỤC 4: Nhi
+**Yêu cầu:
+- Chọn Địa chỉ/Phương thức Thanh toán: Nhập/chọn địa chỉ giao hàng. Chọn phương thức thanh toán (Thanh toán khi nhận hàng - COD là cơ bản).
+- Tạo Đơn hàng: Lưu thông tin đơn hàng (Khách hàng, Sản phẩm, Tổng tiền, Địa chỉ, Trạng thái...).
+- Hoàn thiện chức năng đặt hàng, bao gồm form điền thông tin giao hàng, chọn tỉnh thành, và lưu đơn hàng vào database.
+- Chuyển giao diện trang đặt hàng từ HTML sang.
+
+**Flow:
+1. Đặt hàng: `Controllers/CheckoutController.cs` (Form điền thông tin + JS chọn tỉnh thành)
+2. Xác nhận đơn hàng: `Controllers/CheckoutController.cs` (Thông báo đặt hàng thành công)
+
+**Các file cần làm:
+- Controllers/CheckoutController.cs
+- Views/Checkout/ (Index, Success)
+- ViewModels/CheckoutVM.cs
+- Models/Order.cs & OrderDetail.cs
+
+----------------------------
+MỤC 5: Dung
+**Yêu cầu:
+- Xem Đơn hàng (Khách hàng): Khách hàng xem lịch sử đơn hàng của mình, xem chi tiết đơn hàng.
+- Quản lý Đơn hàng (Admin): Liệt kê, tìm kiếm, lọc đơn hàng. Xem chi tiết đơn hàng.
+- Chuyển Trạng thái Đơn hàng (Admin): Cập nhật trạng thái đơn hàng (vd: Chờ xử lý, Đang giao hàng, Hoàn thành, Hủy...).
+
+**Flow: 
+1. Khách hàng xem lịch sử đơn hàng: `Controllers/OrderController.cs` - Mục Index
+2. Admin quản lý đơn hàng: `Areas/Admin/Controllers/OrderController.cs` - Mục Index và Details
+
+**Các file cần làm: 
+- Controllers/OrderController.cs (Của Khách)
+- Areas/Admin/Controllers/OrderController.cs (Của Admin)
+- Views/Order/Index.cshtml (Lịch sử khách)
+- Areas/Admin/Views/Order/ (Index, Details)
+
+
+

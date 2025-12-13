@@ -1,0 +1,409 @@
+/*--PHAN CHUNG MINH LA AI --*/
+body {
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #4A2C2A;
+}
+
+.intro-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li, a {
+    font-family: 'Alata', sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    font-size: 50px; 
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #563333;
+}
+
+.intro-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.col-left {
+    flex: 1;
+}
+
+.col-left img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.col-right {
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #4A2C2A;
+}
+
+.col-right p {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    background: #768862  ;
+    padding: 12px 26px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #768862  ;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    .intro-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-right {
+        text-align: center;
+    }
+}
+
+/*--PHAN SU MENH --*/
+.mission-section {
+    background: var(--primary);
+    padding: 38px 0;
+}
+
+
+.mission-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.mission-text {
+    flex: 1 1 55%;
+    padding-left: 60px;
+}
+
+.mission-text h2 {
+    color: var(--secondary);
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    line-height: 0.95;
+}
+
+.mission-text p {
+    color: var(--secondary);
+    font-size: 17px;
+    line-height: 2;
+    max-width: 620px;
+    margin-bottom: 22px;
+    opacity: 0.95;
+}
+
+.mission-image {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-image img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .mission-text h2 { font-size: 56px; }
+    .mission-image img { max-width: 320px; }
+    .mission-text { padding-left: 30px; }
+}
+
+@media (max-width: 768px) {
+    .mission-wrapper { flex-direction: column; text-align: center; }
+    .mission-text { order: 2; padding-left: 0; }
+    .mission-image { order: 1; margin-bottom: 20px; }
+    .mission-text h2 { font-size: 44px; }
+    .mission-text p { margin: 0 auto 16px; }
+}
+
+/*--PHAN TAM NHIN--*/
+
+/* ==== TỔNG THỂ SECTION ==== */
+.vision-section {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+/* ==== WRAPPER 2 CỘT ==== */
+.vision-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+/* ==== ẢNH ==== */
+.vision-image {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.vision-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+/* ==== TEXT ==== */
+.vision-text {
+    flex: 1;
+}
+
+.vision-text h2 {
+    font-family: 'Alata', sans-serif;
+    font-size: 50px;       
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #5c3b35;
+}
+
+.vision-text p {
+    font-family: 'Alata', sans-serif;
+    font-size: 17px;        
+    line-height: 1.8;
+    color: #5c3b35;
+    margin-bottom: 18px;
+    max-width: 540px;
+}
+
+.vision-text strong {
+    font-weight: 700;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+    .vision-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .vision-text h2 {
+        font-size: 40px;
+    }
+
+    .vision-text p {
+        margin: 0 auto 18px;
+        font-size: 16px;
+    }
+
+    .vision-image img {
+        max-width: 360px;
+    }
+}
+
+
+
+/*--PHAN GIA TRI COT LOI--*/
+.core-values-new {
+    padding: 40px 20px 60px;
+    background: #fff;
+    text-align: center;
+}
+
+.core-main-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #563333;
+    margin-bottom: 50px;
+}
+
+.core-grid {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: flex-start;        
+}
+
+.core-item {
+    flex: 1;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tiêu đề: cố định chiều cao để tất cả bằng nhau dù 1 hay 2 dòng */
+.core-item-title {
+    font-family: 'Alata', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #563333;
+    line-height: 1.4;
+    margin-bottom: 38px;
+    min-height: 56px;                    /* quan trọng: cố định chiều cao */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ảnh: đẩy xuống bằng nhau, căn giữa tuyệt đối */
+.core-img-wrapper {
+    height: 160px;                       /* cố định chiều cao vùng ảnh */
+    display: flex;
+    align-items: center;               
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.core-img-wrapper img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.core-item:hover .core-img-wrapper img {
+    transform: translateY(-10px);
+}
+
+/* Mô tả */
+.core-desc {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #563333;
+    max-width: 270px;
+    margin: 0 auto;
+}
+
+/* Responsive – mobile vuốt ngang */
+@media (max-width: 1200px) {
+    .core-grid { gap: 60px; }
+    .core-main-title { font-size: 42px; margin-bottom: 80px; }
+    .core-img-wrapper { height: 140px; }
+    .core-img-wrapper img { width: 140px; height: 140px; }
+}
+
+@media (max-width: 768px) {
+    .core-values-new { padding: 100px 15px; }
+    .core-main-title { font-size: 36px; margin-bottom: 70px; }
+    
+    .core-grid {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0 20px;
+        gap: 70px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .core-grid::-webkit-scrollbar { display: none; }
+    .core-grid { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    .core-item { min-width: 260px; }
+    .core-item-title { min-height: 52px; font-size: 19px; }
+}
+
+
+/* ==================== CTA TÌM HIỂU THÊM  ==================== */
+
+.cta-story {
+    padding: 10px 20px;   
+    background: #fff;
+    text-align: center;
+}
+
+.cta-story .intro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cta-text {
+    font-family: 'Alata', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #563333;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+.cta-text .highlight {
+    color: #563333;
+    font-weight: 700;
+}
+
+/* Nút xanh lá */
+.cta-btn {
+    display: inline-block;
+    padding: 16px 48px;
+    background: linear-gradient(135deg, #768862, #5f7045);
+    color: #fff !important;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(118, 136, 98, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(118, 136, 98, 0.4);
+    background: linear-gradient(135deg, #829974, #6b804e);
+}
+
+.cta-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-text {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .cta-btn {
+        padding: 14px 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-text {
+        font-size: 21px;
+    }
+    .cta-btn {
+        padding: 12px 36px;
+        font-size: 17px;
+    }
+}

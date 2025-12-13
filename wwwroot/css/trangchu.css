@@ -1,0 +1,500 @@
+/*Font Alata + Reset cơ bản */
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, .btn, .nav-link {
+    font-family: 'Alata', sans-serif !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+    color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+/* --- HERO SECTION --- */
+.trangchu-hero {
+    background: linear-gradient(135deg, #FFF8E8 0%, #FFF8CC 100%);
+    position: relative;
+    padding-top: 30px; /* Đẩy nội dung xích lên trên (giảm khoảng cách cũ) */
+    padding-bottom: 180px; /* Chừa khoảng trống lớn ở dưới cho sóng */
+    overflow: hidden;
+    min-height: 85vh; /* Chiều cao tối thiểu */
+}
+
+.text-brown {
+    color: #563333 !important;
+}
+
+/* Chỉnh Tiêu đề lớn */
+.hero-title {
+    font-family: 'Alata', sans-serif; 
+    font-size: 50px;
+    line-height: 1.3 !important;
+}
+
+/* Ảnh Cún Mèo */
+.trangchu-hero-dogcat {
+    max-width: 85%; /* To vừa phải */
+    height: auto;
+    filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.1));
+    animation: float 5s ease-in-out infinite;
+}
+
+/* --- NÚT OUTLINE (Viền) --- */
+.btn-hero-outline {
+    background-color: transparent;
+    border: 2px solid #768862; /* Viền nâu */
+    color: #768862;     
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-outline:hover {    
+    color: #768862;     /* Chữ đổi xanh */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- SÓNG CONG (WAVE) --- */
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0; /* Quan trọng để không bị khoảng trắng */
+    z-index: 1;
+    pointer-events: none !important; 
+}
+
+.hero-wave svg {
+    display: block;
+    width: 100%;
+    height: auto; /* Tự co giãn theo màn hình */
+    min-height: 100px;
+    transform: scaleX(-1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .trangchu-hero {
+        padding-top: 40px;
+        padding-bottom: 100px;
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .hero-title {
+        font-size: 30px; /* Nhỏ lại trên điện thoại */
+    }
+    
+    .trangchu-hero-dogcat {
+        margin-top: 40px;
+        max-width: 70%;
+    }
+}
+.trangchu-hero .display-3 {
+    color:#563333 !important;
+}
+.trangchu-hero p.text-muted,
+.trangchu-hero p,
+.trangchu-hero .lead,
+.trangchu-hero p:not(.btn) {       
+    letter-spacing: 0.3px !important;
+}
+
+/* --- CATEGORY CARD (PHIÊN BẢN NGANG) --- */
+.category-card {
+    background: #768862;          
+    border-radius: 20px;          /* Bo góc vừa phải */
+    padding: 20px 40px;           /* Padding rộng để thẻ to ra */
+    height: auto;                 /* Để chiều cao tự động theo nội dung */
+    min-height: 120px;            /* Chiều cao tối thiểu */
+    
+    /* QUAN TRỌNG: Flex row để hình và chữ nằm ngang */
+    display: flex !important;     
+    flex-direction: row !important; 
+    justify-content: flex-start !important; /* Căn lề trái */
+    align-items: center !important;         /* Căn giữa theo chiều dọc */
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(105, 114, 96, 0.25);
+}
+
+/* Hiệu ứng khi di chuột */
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(124, 179, 66, 0.35);
+    background: #5d6f4a;
+}
+
+/* Chỉnh icon nhỏ lại xíu cho cân đối */
+.category-card img {
+    width: 120px !important;       /* Kích thước icon */
+    height: 120px !important;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Chuyển icon sang màu trắng */
+    margin-bottom: 0 !important;     /* Bỏ margin dưới cũ */
+}
+
+/* Chỉnh phần chữ */
+.category-card h4 {
+    font-size: 1.5rem;
+    font-family: 'Alata', sans-serif;
+}
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+    .category-card {
+        height: 160px;
+        padding: 25px 15px;
+    }
+    .category-card .icon img {
+        width: 70px;
+        height: 70px;
+    }
+    h2[style*="color: #5D4037"] {
+        font-size: 2rem !important;
+    }
+}
+/* EXPERIENCE SECTION */
+.experience-section {
+    background: #FAFAFA;
+}
+
+.experience-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+    animation: float-soft 8s ease-in-out infinite;
+}
+
+
+/* Hiệu ứng lơ lửng */
+@keyframes float-soft {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+/* Làm chữ xanh lá nổi bật hơn */
+.experience-section h2 {
+    line-height: 1.3;
+    font-family: 'Alata', sans-serif;
+}
+
+.btn-start-outline {
+    background-color: transparent;
+    border: 2px solid #768862 !important;
+    color: #768862 !important;     
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    font-weight: bold !important;
+}
+
+.btn-start-outline:hover {    
+    color: #768862;     /* Chữ đổi xanh */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/*TRẢI NGHIỆM MUA SẮM*/
+.experience-section p.text-muted,
+.experience-section .lead,
+.experience-section p:not(.btn),
+.experience-section .text-gold,
+.experience-section p.text-warning {
+    color: #563333 !important;          
+    font-size: 1.25rem !important;       
+    line-height: 1.6 !important;
+    letter-spacing: 0.4px !important;
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.12),
+        0 0 15px rgba(255,255,255,0.9) !important;  
+    margin: 20px 0 35px !important;
+}
+
+/* Responsive cho điện thoại: hình lên trên, chữ xuống dưới */
+@media (max-width: 992px) {
+    .experience-section .row {
+        flex-direction: column-reverse;
+    }
+    .experience-section h2 {
+        font-size: 2.2rem !important;
+        text-align: center;
+    }
+    .experience-section p {
+        text-align: center;
+    }
+    .experience-section .btn {
+        display: block;
+        margin: 0 auto;
+    }
+}
+/* BRANDS SECTION */
+
+.brands-section {
+    padding: 120px 0;
+    background: #fff;
+}
+
+/* Logo thương hiệu */
+.brand-logo-large {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.brands-carousel .item:hover .brand-logo-large {
+    transform: scale(1.1);
+}
+
+.brand-name {
+    font-weight: 700;
+    color: #563333;
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.brands-carousel small {
+    color: #768862;
+    font-size: 0.85rem;
+}
+
+/* 2 nút mũi tên */
+.brand-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 2px solid #768862;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #768862;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.brand-prev { left: -25px; }
+.brand-next { right: -25px; }
+
+.brand-nav:hover {
+    background: #768862;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 12px 30px rgba(118,136,98,0.4);
+}
+
+/* Ẩn nút trên điện thoại */
+@media (max-width: 992px) {
+    .brand-nav {
+        display: none !important;
+    }
+    .brand-prev { left: 10px; }
+    .brand-next { right: 10px; }
+}
+
+/* Owl Carousel tinh chỉnh */
+.brands-carousel .owl-dots {
+    margin-top: 30px;
+}
+.brands-carousel .owl-dot.active span {
+    background: #768862 !important;
+}
+
+/* YÊU THƯƠNG ĐƯỢC LAN TỎA */
+.testimonials-section {
+    background: linear-gradient(135deg, #FFF8E8 0%, var(--secondary) 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 250px !important; 
+    padding-bottom: 240px !important;    
+    margin-bottom: -140px !important;     
+}
+/* --- THÊM SÓNG Ở TRÊN ĐỈNH --- */
+.testimonials-section::after {
+    content: '';
+    position: absolute;
+    top: 0;     
+    left: 0;
+    width: 100%;
+    height: 300px !important;  
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 260' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0,80 C360,180 1080,100 1440,80 L1440,260 L0,260 Z'/%3E%3C/svg%3E") bottom center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    transform: rotate(180deg); 
+}
+
+/* QUAN TRỌNG: Đẩy nội dung (chữ/hình) nổi lên trên lớp sóng */
+.testimonials-section .container {
+    position: relative;
+    z-index: 2; /* Cao hơn z-index của sóng (là 1) */
+}
+/* Sóng trắng dưới đáy  */
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 260px;    
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 260' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23ffffff' d='M0,80 C360,180 1080,100 1440,80 L1440,260 L0,260 Z'/%3E%3C/svg%3E") bottom center no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+/* Ảnh tròn khách hàng */
+.testimonial-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;         
+    border: 8px solid #ffffff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    margin: 0 auto;
+    display: block;
+}
+/* Hover nhẹ nhàng */
+.testimonial-item:hover .testimonial-img {
+    transform: translateY(-12px) scale(1.08);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+/* Tên + nội dung */
+.testimonial-item h5 {
+    font-size: 1.25rem;
+    margin: 20px 0 12px;
+    color: #5D4037;
+}
+.testimonial-item p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #6d4c41;
+    padding: 0 15px;
+}
+
+/* Responsive điện thoại */
+@media (max-width: 768px) {
+    .testimonial-img {
+        width: 130px;
+        height: 130px;
+        border-width: 6px;
+    }
+    .testimonials-section {
+        padding: 100px 0 180px 0;
+    }
+}
+
+/* Tiêu đề + nút Đọc thêm */
+.blog-header {
+    position: relative;
+    z-index: 10;
+    padding-top: 100px;
+    margin-top: -120px;        
+    border-radius: 30px 30px 0 0;  
+}
+.blog-header h2 {
+    color: #563333 !important;
+    font-weight: 700;
+}
+
+/* Responsive: trên điện thoại nút xuống dưới tiêu đề */
+@media (max-width: 768px) {
+    .blog-header h2 {
+        font-size: 2rem !important;
+        text-align: center;
+    }
+    .blog-header .d-flex {
+        justify-content: center !important;
+    }
+}
+/* CÁC BÀI VIẾT NỔI NHẤT */
+.blog-section {
+    background: white !important;
+}
+.blog-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.blog-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+.blog-card img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.4s ease;
+}
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+.blog-card h5 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    min-height: 50px;
+}
+.blog-card p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #444 !important;
+    margin-bottom: 10px;
+}
+/* Responsive */
+@media (max-width: 992px) {
+    .blog-card img {
+        height: 160px;
+    }
+    .blog-card h5 {
+        font-size: 1.05rem;
+        min-height: auto;
+    }
+}
+@media (max-width: 576px) {
+    .blog-section h2 {
+        font-size: 2rem !important;
+    }
+    .blog-card {
+        padding: 15px;
+    }
+    .blog-card img {
+        height: 140px;
+    }
+}
+.btn-success,
+.btn-primary,
+.category-card,
+.experience-section .btn,
+.navbar .nav-contact {   
+    transition: all 0.3s ease !important;
+}
+/* Hover cho tất cả các nút */
+.btn-success:hover,
+.btn-primary:hover,
+.category-card:hover,
+.experience-section .btn:hover,
+.navbar .nav-contact:hover {
+    transform: translateY(-4px) !important;
+
+}
+

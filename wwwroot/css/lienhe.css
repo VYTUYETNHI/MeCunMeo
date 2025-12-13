@@ -1,0 +1,210 @@
+body, * {
+    font-family: 'Alata', sans-serif;
+}
+
+.blog-hero {
+    min-height: 277px;
+    background: #768862;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+
+.blog-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-hero .breadcrumb {
+    background: transparent;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.blog-hero .breadcrumb-item a {
+    color: rgba(255,255,255,0.8) !important;
+    transition: 0.3s;
+}
+
+.blog-hero .breadcrumb-item a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+
+.blog-hero .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+.blog-hero .breadcrumb-item a:hover + .breadcrumb-item::before {
+    color: #fff !important;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-hero {
+        min-height: 320px;
+    }
+    .blog-hero h1 {
+        font-size: 3.2rem !important;
+    }
+}
+
+
+.contact-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #563333;
+    font-family: 'Alata', sans-serif; 
+    letter-spacing: 0.5px;
+}
+
+
+
+
+.form-control {
+    background: #f8f9fa !important;
+    border: none !important;
+    height: 48px;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+textarea.form-control {
+    height: auto;
+    padding: 14px !important;
+    border-radius: 10px;
+}
+
+
+.btn-primary {
+    display: inline-block;     
+    width: auto !important;    
+    min-width: 120px;        
+    max-width: 170px;         
+    padding: 10px 16px;       
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 12px;       
+    background: #768862 !important;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #768862 !important;
+}
+
+
+/* PHẦN NHẬN TIN & ƯU ĐÃI  */
+
+.nhan-uu-dai-img {
+    max-width: 350px;
+    margin-top: 1rem;  
+    display: block;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.newsletter-box {
+    background: transparent !important;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.newsletter-box h4 {
+    color: #563333;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.newsletter-box p {
+    color: #563333;
+    font-size: 14.5px;
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+
+.newsletter-box .form-control {
+    background: #fff !important;
+    border: 1.5px solid #ddd !important;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 50px;
+    max-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.newsletter-box .btn-success {
+    background: #768862; 
+    color: white;
+    border: none;
+    border-radius: 6px; 
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 18px; 
+    width: auto;      
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-box .btn-success:hover {
+    background: #5f714f; 
+}
+
+
+/* ================== 4 Ô THÔNG TIN LIÊN HỆ ================== */
+.contact-box {
+    background: #768862;
+    border-radius: 24px;
+    min-height: 170px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.contact-box .icon i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.contact-box h6 {
+    color: #FFF8CC !important;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0 8px;
+}
+
+.contact-box p,
+.contact-box a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .newsletter-box .form-control,
+    .newsletter-box .btn-success {
+        max-width: 100%;
+    }
+}
+
+

@@ -1,0 +1,211 @@
+/* --- TRANG CHI TIẾT SẢN PHẨM --- */
+
+/* --- ÉP FONT ALATA TOÀN TẬP --- */
+
+/* 1. Áp dụng cho tất cả các thẻ văn bản */
+body, h1, h2, h3, h4, h5, h6,
+p, span, a, li, label, strong, b, small,
+input, button, select, textarea,
+.btn, .form-control, .breadcrumb-item, .badge {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 2. Ép riêng cho phần giá tiền và số lượng để số nhìn đẹp hơn */
+.h2, .fs-5, #qtyInput {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 3. Tinh chỉnh độ đậm (Lưu ý quan trọng) */
+/* Vì Alata nét mặc định khá dày, nên các thẻ in đậm ta có thể để normal hoặc bold tùy mắt nhìn */
+h1, h2, h3, h4, h5, h6, .fw-bold {
+    font-weight: 600 !important; /* Để 400 nhìn sẽ thanh thoát, hiện đại */
+    /* Hoặc để 600 nếu bạn thích chữ dày cộp */
+}
+
+/* 4. Chỉnh lại khoảng cách dòng cho Mô tả chi tiết dễ đọc hơn với font Alata */
+.product-description p, 
+.product-description li {
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+}
+
+/* 1. Ảnh Thumbnail (Ảnh nhỏ bên dưới) */
+.thumb-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+.thumb-img:hover, .thumb-img.active {
+    opacity: 1;
+    border-color: #768862 !important;
+    border-width: 2px !important;
+}
+
+/* 2. Nút phân loại (Option) */
+.btn-outline-brown {
+    color: #563333;
+    border-color: #ddd;
+    font-weight: 600;
+}
+.btn-check:checked + .btn-outline-brown {
+    background-color: #563333;
+    color: white;
+    border-color: #563333;
+}
+.btn-outline-brown:hover {
+    border-color: #563333;
+    background-color: #f8f9fa;
+    color: #563333;
+}
+
+/* 3. Input Số lượng */
+#qtyInput {
+    max-width: 50px;
+}
+#qtyInput::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Ẩn nút tăng giảm mặc định */
+}
+
+/* 4. Tiêu đề phần Mô tả (Gạch chân xanh) */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    height: 3px;
+    background-color: #768862;
+    border-radius: 2px;
+}
+
+/* 5. Icon Sao trong Form đánh giá */
+.rating-select i {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rating-select i:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+/* --- FIX LỖI TRANG CHI TIẾT --- */
+
+/* 1. SỬA LỖI HÌNH BỊ KÉO NGANG (QUAN TRỌNG) */
+#mainImage {
+    object-fit: contain !important; /* Giữ nguyên tỉ lệ ảnh, không bị méo */
+    width: 100% !important;
+    height: 450px !important;       /* Chiều cao cố định */
+    background-color: #fff;         /* Nền trắng phòng khi ảnh không lấp đầy */
+}
+
+/* 2. BO TRÒN CÁC KHUNG (Mô tả, Đánh giá, Ảnh) */
+.main-image-box,       /* Khung ảnh chính */
+.bg-light,             /* Khung form đánh giá */
+.input-group,          /* Khung số lượng */
+.alert-light,          /* Khung mô tả ngắn */
+.bg-white.border      /* Khung mô tả chi tiết */
+{
+    border-radius: 20px !important; /* Bo tròn mềm mại */
+    overflow: hidden; /* Đảm bảo nội dung bên trong bo theo */
+}
+
+/* 3. CHỈNH NÚT PHÂN LOẠI (Chữ mảnh lại) */
+.btn-outline-brown {
+    font-weight: 400 !important; /* Chữ mảnh (Normal) */
+    border-radius: 10px !important; /* Bo góc nút */
+    padding: 8px 20px !important;
+}
+/* Khi chọn thì đậm lên xíu cho rõ */
+.btn-check:checked + .btn-outline-brown {
+    font-weight: 400 !important; 
+}
+
+/* 4. SỬA LỖI CHỮ BỊ VÀNG TRONG MÔ TẢ (CẤP CỨU) */
+.product-description, 
+.product-description p, 
+.product-description li, 
+.product-description span,
+.text-secondary {
+    color: #555555 !important; /* Ép về màu xám đen dễ đọc */
+    font-weight: 400 !important; /* Chữ mảnh lại cho đỡ thô */
+}
+
+/* Các tiêu đề nhỏ trong mô tả (Đặc điểm nổi bật...) thì cho màu nâu */
+.product-description h6, 
+.product-description strong, 
+.product-description b {
+    color: #563333 !important;
+    font-weight: 700 !important;
+}
+
+/* --- FIX LỖI NÚT SỐ LƯỢNG --- */
+
+/* 1. Khung bao ngoài (Hình viên thuốc) */
+.input-group {
+    border: 1px solid #d0d0d0 !important; /* Viền xám mỏng */
+    border-radius: 50px !important;        /* Bo tròn 2 đầu */
+    background-color: #fff !important;     /* Nền trắng */
+    overflow: hidden;                      /* Cắt bỏ góc thừa */
+    width: 120px !important;               /* Cố định chiều rộng cho đẹp */
+    height: 40px !important;               /* Cố định chiều cao */
+    box-shadow: none !important;           /* Bỏ bóng nếu có */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important; /* Chia đều khoảng cách */
+    flex-wrap: nowrap !important; /* Cấm rớt dòng, ép nằm ngang */
+    box-shadow: none !important;
+}
+
+/* 2. Hai nút cộng trừ (+ -) */
+.input-group .btn {
+    background-color: transparent !important; /* QUAN TRỌNG: Xóa màu vàng/xám */
+    color: #563333 !important;                /* Dấu + - màu Nâu */
+    border: none !important;                  /* Bỏ viền nút */
+    font-size: 20px !important;
+    font-weight: 400 !important;              /* Độ đậm vừa phải */
+    padding: 0 !important;                    /* Bỏ padding để dễ căn giữa */
+    width: 35px !important;                   /* Chiều rộng nút */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+/* Hiệu ứng khi di chuột vào nút + - */
+.input-group .btn:hover {
+    background-color: #f5f5f5 !important; /* Nền xám nhẹ khi hover */
+    color: #768862 !important;            /* Đổi màu xanh */
+}
+
+/* 3. Ô số ở giữa */
+#qtyInput {
+    background-color: transparent !important;
+    border: none !important;
+    color: #563333 !important;
+    font-weight: 700 !important; /* Số đậm */
+    text-align: center !important;
+    padding: 0 !important;
+    width: 50px !important; /* Chiều rộng ô số */
+    height: 100% !important;
+}
+.btn-send-review {
+    background-color: #768862;
+    color: white;
+    font-weight: 500 !important;
+    border-radius: 10px !important;
+}
+.form-control {
+    border-radius: 10px !important;
+}
+
+.btn-love {
+    color: #768862 !important;        /* Viền và icon màu xanh */
+    border-color: #768862 !important;
+}
+.btn-love:hover {
+    background-color: #768862 !important; /* Hover vào nền xanh */
+    color: #fff !important;               /* Icon trắng */
+}

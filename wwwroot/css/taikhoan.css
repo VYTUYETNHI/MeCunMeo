@@ -1,0 +1,148 @@
+/* --- CÀI ĐẶT FONT ALATA CHO TOÀN BỘ WEB --- */
+
+/* 1. Áp dụng cho thân trang và các thẻ tiêu đề */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 2. Áp dụng cho tất cả các ô nhập liệu, nút bấm (Bootstrap thường chặn cái này nên phải ép) */
+input, select, textarea, button, 
+.form-control, .form-select, .btn, 
+label, span, p, a, li {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 3. Áp dụng cho placeholder (chữ mờ gợi ý) */
+::placeholder {
+    font-family: 'Alata', sans-serif !important;
+}
+
+/* 4. Điều chỉnh lại độ đậm (Vì Alata chỉ có 1 nét, nên ta để normal cho đẹp) */
+body {
+    font-weight: 400; /* Alata chuẩn */
+}
+
+/* Nếu muốn tiêu đề dày hơn một chút (giả lập đậm) */
+h1, h2, h3, h4, h5, h6, .fw-bold, strong, b {
+    font-weight: 600 !important; /* Trình duyệt sẽ tự làm đậm chữ Alata lên */
+}
+
+.form-label {
+    font-size: 16px !important; /* Tăng kích thước chữ (Mặc định thường là 14px) */
+    font-weight: 600 !important; /* Đậm hơn xíu cho rõ */
+    color: #563333 !important;   /* Màu nâu cho nổi */
+    margin-bottom: 8px;          /* Cách xa ô nhập ra một chút cho thoáng */
+}
+
+
+/* --- TRANG TÀI KHOẢN USER --- */
+
+/* 1. Sidebar Menu */
+.menu-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #555; /* Màu chữ thường */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Hiệu ứng khi rê chuột vào menu */
+.menu-link:hover {
+    background-color: #f0fdf4; /* Nền xanh nhạt */
+    color: var(--primary); /* Chữ xanh */
+    transform: translateX(5px); /* Dịch sang phải xíu */
+}
+
+/* Menu đang được chọn (Active) */
+.menu-link.active {
+    background-color: var(--primary);
+    color: white;
+}
+.menu-link.active:hover {
+    color: white; /* Giữ nguyên màu trắng khi hover vào cái đang active */
+    background-color: var(--primary);
+}
+
+/* Icon trong menu */
+.menu-link i {
+    width: 25px; /* Cố định chiều rộng icon để chữ thẳng hàng */
+    text-align: center;
+}
+
+/* 2. Nút tròn nhỏ (Sửa avatar) */
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 3. Form Input Styles */
+.form-label {
+    color: #563333;
+    margin-bottom: 5px;
+}
+
+.form-control, .form-select {
+    border-radius: 10px; /* Bo tròn input */
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #768862;
+    box-shadow: 0 0 0 0.25rem rgba(118, 136, 98, 0.15);
+}
+
+/* 4. Radio Button (Giới tính) */
+.form-check-input:checked {
+    background-color: #563333;
+    border-color: #563333;
+}
+
+/* --- CHỈNH NÚT THÊM BÉ MỚI --- */
+.btn-add-pet {
+    font-size: 15px !important;     /* Cỡ chữ to hơn (Mặc định btn-sm chỉ khoảng 12px) */  /* Chữ đậm cho rõ */
+    padding: 4px 15px !important;   /* Tăng khoảng cách trong nút cho nút to ra */
+    
+    /* Màu sắc */
+    color: #768862 !important;      /* Màu chữ xanh rêu */
+    border: 2px solid #768862 !important; /* Viền dày 2px màu xanh rêu */
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.btn-add-pet:hover {
+    background-color: #768862 !important; /* Nền chuyển sang xanh */
+    color: white !important;              /* Chữ chuyển sang trắng */  
+}
+
+/* --- NÚT LƯU THAY ĐỔI MÀU XANH --- */
+.btn-savechange {
+    background-color: #768862 !important; /* Màu xanh rêu thương hiệu */
+    border: 1px solid #768862 !important;
+    color: white !important;
+    font-size: 16px;
+    border-radius: 50px; /* Bo tròn viên thuốc */
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào: Đậm hơn chút */
+.btn-savechange:hover {
+    background-color: #5d6e4b !important; /* Xanh đậm hơn */
+    border-color: #5d6e4b !important;
+    box-shadow: 0 4px 10px rgba(118, 136, 98, 0.4); /* Bóng đổ xanh */
+}
+
+.text-verified {
+    color: #768862 !important; 
+    background-color: transparent !important; 
+}

@@ -1,0 +1,889 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+
+    --primary: #768862;
+    --secondary:  #FFF8CC;
+    --title: #563333;
+    --light: #F3F3F3;
+    --dark: #212121;
+}
+
+[class^=flaticon-]:before,
+[class*=" flaticon-"]:before,
+[class^=flaticon-]:after,
+[class*=" flaticon-"]:after {
+    font-size: inherit;
+    margin-left: 0;
+}
+
+
+/*top bar css*/
+.top-bar {
+    font-family: 'Alata', sans-serif;
+    font-weight: 300;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+.top-bar-left {
+    display: flex;
+    padding-left: 60px;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 50px;
+}
+.social-item {
+    display: flex;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.social-item:hover {
+    background-color: #FFFFFF;
+    color: var(--primary);
+    border-color: white; 
+}
+
+/*end top bar css*/
+
+/* Button CSS */
+.btn {
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 99;
+}
+
+/*navigation bar*/ 
+/*logo*/
+.navbar-brand img {
+    position: relative;
+    width: 300px;
+    max-height: 35px;
+    padding-left: 100px;
+    object-fit: cover;
+}
+
+/*menu*/
+.nav-link {
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--title) !important;
+    outline: none;
+    transition: 0.15s;
+}
+
+.navbar-nav {
+    padding-right: 90px;
+}
+
+/*hiệu ứng menu*/
+.navbar-nav .nav-link:hover {
+    color: var(--primary) !important;
+    transform: translateY(-3px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+/*icon*/
+.navbar-icons {
+    display: flex;
+    gap: 25px; 
+    align-items: center;
+    padding-right:100px;
+}
+
+.navbar-icons .dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    color: var(--title); 
+    font-size: 20px; 
+    transition: transform 0.2s, color 0.2s;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 4px 6px;
+}
+
+/*hiệu ứng cho icon*/
+.icon-link:hover {
+    color: var(--primary); 
+    transform: translateY(-2px); 
+}
+
+.badge-cart {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--secondary); 
+    color: var(--dark); 
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center; 
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+/*end navigation bar*/
+
+.hero-header {
+    background: url(../img/hero.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.btn-play {
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: 16px;
+    height: 26px;
+    border-radius: 100%;
+    border: none;
+    outline: none !important;
+    padding: 18px 20px 20px 28px;
+    background: #FFFFFF;
+}
+
+.btn-play:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 100%;
+    transition: all 200ms;
+}
+
+.btn-play span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    left: -1px;
+    border-left: 16px solid var(--primary);
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+        opacity: 0;
+    }
+}
+
+#videoModal .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+#videoModal .modal-body {
+    position: relative;
+    padding: 0px;
+}
+
+#videoModal .close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: -30px;
+    z-index: 999;
+    font-size: 30px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background: #000000;
+    opacity: 1;
+}
+
+.service-item a i {
+    position: relative;
+    padding-left: 20px;
+    transition: .3s;
+}
+
+.service-item a:hover i {
+    padding-left: 50px;
+}
+
+.service-item a i::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 10px;
+    margin-top: -1px;
+    background: var(--primary);
+    transition: .3s;
+}
+
+.service-item a:hover i::after {
+    width: 50px;
+}
+
+.product-item {
+    padding: 30px;
+}
+
+.product-item .btn-action {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+
+.product-item:hover .btn-action {
+    bottom: -20px;
+    opacity: 1;
+}
+
+.product-carousel .owl-nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.product-carousel .owl-nav .owl-prev,
+.product-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 55px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-size: 22px;
+    transition: .5s;
+}
+
+.product-carousel .owl-nav .owl-prev:hover,
+.product-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.bg-offer {
+    background: url(../img/offer.jpg) top right no-repeat;
+    background-size: cover;
+}
+
+.price-carousel::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: var(--primary);
+    border-radius: 8px 8px 50% 50%;
+    z-index: -1;
+}
+
+.price-carousel .owl-nav {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.price-carousel .owl-nav .owl-prev,
+.price-carousel .owl-nav .owl-next{
+    position: relative;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-size: 22px;
+    border-radius: 45px;
+    transition: .5s;
+}
+
+.price-carousel .owl-nav .owl-prev:hover,
+.price-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.team-carousel .owl-nav {
+    position: absolute;
+    width: 50px;
+    height: 160px;
+    top: calc(50% - 80px);
+    right: 0;
+    z-index: 1;
+}
+
+.team-carousel .owl-nav .owl-prev,
+.team-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-size: 22px;
+    transition: .5s;
+}
+
+.team-carousel .owl-nav .owl-prev:hover,
+.team-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.2);
+}
+
+.team-item .team-overlay {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    bottom: 45px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  #768862  ;
+    transition: .5s;
+    opacity: 0;
+}
+
+.team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.bg-testimonial {
+    background: url(../img/testimonial.jpg) top left no-repeat;
+    background-size: cover;
+}
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 100%;
+    height: 46px;
+    top: calc(50% - 23px);
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+.testimonial-carousel .owl-item img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (min-width: 576px) {
+    .blog-item .row {
+        height: 300px;
+    }
+}
+
+.blog-item a i {
+    position: relative;
+    padding-left: 20px;
+    transition: .3s;
+}
+
+.blog-item a:hover i {
+    padding-left: 50px;
+}
+
+.blog-item a i::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 10px;
+    margin-top: -1px;
+    background: var(--primary);
+    transition: .3s;
+}
+
+.blog-item a:hover i::after {
+    width: 50px;
+}
+
+/*--footer start--*/
+/* cấu hình chung cho footer */
+.footer-section {
+    background-color: var(--primary); 
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-family: 'Alata', sans-serif;
+    font-size: 15px;
+    color: white;
+    margin-top: 150px;
+}
+
+/* slogan */
+.footer-heading {
+    font-weight: 700;
+    color: var(--secondary); 
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: 'Alata', sans-serif;
+}
+
+/* tiêu đề cột */
+.footer-title {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Alata', sans-serif;
+    color: white;
+}
+
+/* liên hệ */
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-contact-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* link chính sách */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-links a:hover { 
+    color: var(--secondary); 
+    padding-left: 5px; 
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+}
+
+/*icon mxh*/
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.footer-socials a {
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    background-color: white;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.copyright-text {
+    font-size: 13px;
+    opacity: 0.7;
+}
+/*end footer css*/
+
+
+
+/* --- Search overlay --- */
+
+.search-overlay-container {
+    /* CSS chính từ ID #full-search-overlay trong Layout */
+}
+
+.search-overlay-container .container {
+    background: white;
+    position: relative;
+    z-index: 10001; 
+    max-width: 100%; 
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); 
+    z-index: 10000;
+    cursor: pointer;
+}
+
+/* Ô nhập liệu */
+#main-search-input {
+    font-family: 'Alata', sans-serif;
+    color: #563333;
+    border-radius: 0 !important;
+}
+#main-search-input::placeholder {
+    color: #ccc;
+    font-weight: 300;
+}
+#main-search-input:focus {
+    box-shadow: none !important;
+}
+
+.btn-close-overlay {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #768862;
+    transition: 0.3s;
+}
+.btn-close-overlay:hover {
+    transform: rotate(90deg);
+    color: #563333;
+}
+
+.search-links li {
+    margin-bottom: 12px;
+}
+.search-links a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Alata', sans-serif;
+    transition: 0.2s;
+    font-size: 1.1rem;
+}
+.search-links a:hover {
+    color: #768862;
+    padding-left: 5px;
+}
+
+.search-product-card {
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid transparent; 
+}
+
+.search-product-card:hover img {
+    transform: scale(1.05);
+}
+.search-product-card:hover h6 {
+    color: #768862 !important;
+}
+
+#main-search-input {
+    font-size: 1.5rem !important; 
+    padding: 5px 0 !important;
+    height: auto !important;
+}
+
+.search-header .fa-magnifying-glass {
+    font-size: 1.5rem !important; 
+}
+
+.btn-close-overlay {
+    font-size: 24px !important; 
+}
+
+.search-product-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    border-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+.search-product-card img {
+    height: 220px !important; 
+    width: 100%;
+    object-fit: contain;    
+    margin-bottom: 15px;    
+}
+
+.search-brand {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    font-family: 'Alata', sans-serif;
+}
+
+.search-title {
+    display: block; 
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: 'Alata', sans-serif;
+}
+
+.search-product-card:hover .search-title {
+    color: #768862;
+}
+
+#full-search-overlay h6 {
+    font-size: 20px !important;    
+    font-weight: 800 !important;    
+    margin-bottom: 20px !important;  
+    font-family: 'Alata', sans-serif !important;
+}
+
+.search-links li a {
+    font-size: 18px !important;    
+    padding: 5px 0;
+    display: block;
+}
+/* Sửa lỗi Dropdown trong Navbar */
+.navbar-nav .dropdown-menu,
+.navbar-icons .dropdown .dropdown-menu,
+.navbar .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px); /* small gap below trigger */
+    left: 0;
+    right: auto;
+    background: var(--primary);
+    color: #ffffff;
+    min-width: 200px;
+    padding: 0.25rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    z-index: 1050;
+}
+
+/* Dropdown item colors */
+.navbar .dropdown-menu .dropdown-item {
+    color: #ffffff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+}
+.navbar .dropdown-menu .dropdown-divider {
+    border-top-color: rgba(255,255,255,0.12);
+}
+
+/* Show behavior: Bootstrap's .show OR hover fallback */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown .dropdown-menu.show {
+    display: block !important;
+}
+
+/* Hover buffer for navbar-nav dropdowns (Cho Cún, Cho Mèo, etc.) */
+.navbar-nav .dropdown {
+    position: relative;
+    padding-bottom: 4px; /* buffer zone below trigger */
+}
+
+.navbar-nav .dropdown::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 4px;
+    pointer-events: auto;
+    background: transparent;
+}
+
+/* Icon dropdowns: align inward (right edge of menu to trigger's right) */
+.navbar-icons .dropdown {
+    position: relative;
+}
+.navbar-icons .dropdown .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+    top: calc(100% + 2px) !important; /* close gap to trigger */
+    min-width: 180px;
+}
+
+/* Icon dropdowns: align inward (left-shift) so they appear to the left of the icon container */
+.navbar-icons .dropdown {
+    position: relative;
+    /* tăng vùng chạm để người dùng dễ di chuột từ icon xuống menu */
+    padding-bottom: 4px; /* mở rộng vùng chứa phía dưới */
+}
+
+/* Invisible buffer under the icon to keep hover active while moving to the menu */
+.navbar-icons .dropdown::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px; /* same as padding-bottom */
+    height: 4px;
+    pointer-events: auto; /* allow this area to keep hover */
+    background: transparent;
+}
+.navbar-icons .dropdown .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+    transform: none !important;
+    top: calc(100% + 1px) !important; /* minimal gap for close appearance */
+    min-width: 180px;
+    z-index: 1050;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--title);
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: var(--primary);
+    padding-left: 1.5rem;
+}
